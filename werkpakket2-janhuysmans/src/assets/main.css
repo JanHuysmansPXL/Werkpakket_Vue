@@ -1,0 +1,1307 @@
+/* GLOBAL SETTINGS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BASE COLORS */
+/* FONT SIZES */
+/* SCREEN SIZES */
+/* BACKGROUND COLORS */
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-light {
+  background-color: rgb(243, 243, 243);
+}
+
+.bg-primary {
+  background-color: #333;
+}
+
+.bg-secondary {
+  background-color: #666;
+}
+
+.bg-darkest {
+  background-color: #0a0a0a;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.bg-transparant {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* TEXT COLORS */
+.txt-white {
+  color: #FFFFFF;
+}
+
+.txt-light {
+  color: rgb(243, 243, 243);
+}
+
+.txt-primary {
+  color: #333;
+}
+
+.txt-secondary {
+  color: #666;
+}
+
+.txt-darkest {
+  color: #0a0a0a;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+/* BASE FONTS - TYPESET */
+/* MARGIN / PADDING - UTILITY CLASSES*/
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-xs {
+  margin-top: 0.5rem;
+}
+
+.mt-sm {
+  margin-top: 1rem;
+}
+
+.mt-md {
+  margin-top: 2rem;
+}
+
+.mt-lg {
+  margin-top: 3rem;
+}
+
+.mt-xl {
+  margin-top: 5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 2rem;
+}
+
+.mb-lg {
+  margin-bottom: 3rem;
+}
+
+.mb-xl {
+  margin-bottom: 5rem;
+}
+
+.ms-0 {
+  margin-top: 0;
+}
+
+.ms-xs {
+  margin-left: 0.5rem;
+}
+
+.ms-sm {
+  margin-left: 1rem;
+}
+
+.ms-md {
+  margin-left: 2rem;
+}
+
+.ms-lg {
+  margin-left: 3rem;
+}
+
+.ms-xl {
+  margin-left: 5rem;
+}
+
+.me-0 {
+  margin-right: 0;
+}
+
+.me-xs {
+  margin-right: 0.5rem;
+}
+
+.me-sm {
+  margin-right: 1rem;
+}
+
+.me-md {
+  margin-right: 2rem;
+}
+
+.me-lg {
+  margin-right: 3rem;
+}
+
+.me-xl {
+  margin-right: 5rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-xs {
+  padding: 0.5rem;
+}
+
+.p-sm {
+  padding: 1rem;
+}
+
+.p-md {
+  padding: 2rem;
+}
+
+.p-lg {
+  padding: 3rem;
+}
+
+.p-xl {
+  padding: 5rem;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pt-xs {
+  padding-top: 0.5rem;
+}
+
+.pt-sm {
+  padding-top: 1rem;
+}
+
+.pt-md {
+  padding-top: 2rem;
+}
+
+.pt-lg {
+  padding-top: 3rem;
+}
+
+.pt-xl {
+  padding-top: 5rem;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pb-xs {
+  padding-bottom: 0.5rem;
+}
+
+.pb-sm {
+  padding-bottom: 1rem;
+}
+
+.pb-md {
+  padding-bottom: 2rem;
+}
+
+.pb-lg {
+  padding-bottom: 3rem;
+}
+
+.pb-xl {
+  padding-bottom: 5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* MIXINS */
+.card .card-overlay, .card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* UTILITIES */
+/* GRID */
+.container-fluid {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE CONTAINER SIZES */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  backdrop-filter: blur(0.5rem);
+  background: linear-gradient(rgba(243, 243, 243, 0.01), rgba(243, 243, 243, 0.01));
+}
+.navbar .navbar-brand .brand-link {
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(243, 243, 243);
+  font-weight: 700;
+  font-size: 1.618rem;
+  transition: 1.2s;
+}
+.navbar .navbar-brand .brand-link:hover {
+  color: rgba(243, 243, 243, 0.9);
+  letter-spacing: 2px;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem {
+  list-style-type: none;
+  color: #333;
+  display: inline;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button {
+  text-decoration: none;
+  color: #0a0a0a;
+  background-color: rgb(243, 243, 243);
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid #0a0a0a;
+  border-radius: 999px;
+  transition: all 0.5s;
+  padding: 6px 12px;
+  margin-left: 2rem;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button:hover {
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button .fa-user-circle {
+  margin-right: 0.5rem;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .navbar-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-left: 1.25rem;
+  padding-bottom: 6px;
+  transition: all 0.5s;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .navbar-link:hover {
+  font-weight: 500;
+  border-bottom: 2px solid rgb(243, 243, 243);
+}
+
+/* BRAND TEXT */
+.brand-title {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.brand-subtitle {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+/* MAIN TEXT */
+.txt-heading_xxl {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 6.854rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+
+.txt-heading_xl {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 4.236rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.25rem;
+}
+
+.txt-heading_lg {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+}
+
+.txt-heading_md {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.txt-subheader {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.txt-title_sm {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 200;
+  margin-bottom: 0.2rem;
+}
+
+.txt-body_md {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+.txt_body_lg {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
+.txt_body_xl {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
+.infotxt_sm {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 0.7rem;
+  list-style-type: none;
+}
+
+.infotxt_strong {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 0.7rem;
+  list-style-type: none;
+}
+
+/* BUTTONS */
+.main-button {
+  width: 170px;
+  height: 45px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.main-button:hover {
+  background-color: rgb(243, 243, 243);
+  color: #0a0a0a;
+}
+
+.cta-button {
+  display: block;
+  width: 170px;
+  height: 45px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.cta-button:hover {
+  background-color: rgb(243, 243, 243);
+  color: #0a0a0a;
+}
+
+.showcase-button {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(243, 243, 243);
+  outline: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  margin-top: 2rem;
+}
+.showcase-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(243, 243, 243);
+  letter-spacing: 1.5px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  /* CHILD ELEMENT (OVERLAY) GEKOPPELD DOOR DEZE .class TE VERMELDEN NA HET HOVER ELEMENT (CARD)) */
+}
+.card:hover .card-overlay {
+  left: 0;
+  transition: all 0.7s;
+  backdrop-filter: blur(2px);
+}
+.card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  padding: 4rem;
+  background-color: rgba(10, 10, 10, 0.2);
+  color: #FFFFFF;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+}
+.card .card-overlay .card-overlay-heading {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+}
+.card .card-overlay .card-overlay-paragraph {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.card .card-overlay .card-overlay-button {
+  display: block;
+  width: 150px;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.card .card-overlay .card-overlay-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(10, 10, 10, 0.5);
+  border: 1px solid #FFFFFF;
+}
+.card .card-image {
+  object-fit: cover;
+  padding: 5px;
+}
+
+.gallery_header {
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+/* FOOTER */
+.footer {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .footer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.footer .footer-social-media .social-media {
+  display: flex;
+  width: 240px;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+.footer .footer-social-media .social-media .social-media-item {
+  list-style-type: none;
+}
+.footer .footer-social-media .social-media .social-media-item .social-media-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.footer .footer-social-media .social-media .social-media-item .social-media-link:hover {
+  color: rgb(243, 243, 243);
+  transition: all 0.7s;
+}
+.footer .footer-copyright {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* ALGEMENE LAYOUT */
+/* GALLERY */
+.gallery {
+  padding: 2rem;
+}
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0a0a0a;
+}
+.gallery .cards-wrapper .card {
+  width: 25%;
+  flex-grow: 1;
+  aspect-ratio: 1/1;
+}
+
+.showcase {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 60vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.video-bkg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+  right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase-text {
+  position: relative;
+  top: 72px;
+  z-index: 10;
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+.showcase-heading {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.showcase-socials {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-socials li {
+  list-style: none;
+}
+
+.showcase-socials li a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.showcase-socials li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+/* TRANSITION TEXT / IMAGE BG */
+.home-transition {
+  width: 100%;
+  height: 80vh;
+  padding: 2rem 2rem;
+  background: linear-gradient(#0a0a0a, rgba(10, 10, 10, 0.3), black), url("../assets/images/bg_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.home-transition .txt_body_xl {
+  max-width: 38ch;
+  text-align: start;
+}
+
+/* HOME TOP V1 */
+.banner-wide {
+  width: 100%;
+  margin-top: 8rem;
+  height: 60vh;
+  background: linear-gradient(rgba(10, 10, 10, 0), black), url("../assets/images/aurovision_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner-wide .banner-brand {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-wide .hero-banner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .gallery .cards-wrapper .card {
+    width: 100%;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+  }
+  .video-bkg {
+    object-fit: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .gallery .cards-wrapper .card {
+    width: 50%;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+  }
+}
+.login-frame {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.9)), url("../assets/bg_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form * {
+  outline: none;
+  border: none;
+}
+
+.login-form {
+  height: min-content;
+  width: 400px;
+  background-color: rgba(255, 62, 246, 0.05);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.25rem;
+  backdrop-filter: blur(1.2rem);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 3rem 2rem;
+  transition: style ease 0.7s;
+}
+.login-form .login-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.618rem;
+  color: rgb(243, 243, 243);
+  font-weight: 500;
+}
+.login-form .login-label {
+  display: block;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.login-form .login-input_txt {
+  display: block;
+  height: 3rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(10, 10, 10, 0);
+  color: rgb(243, 243, 243);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+}
+.login-form .login-input_txt:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.login-form .login-input_txt:focus {
+  border: 1px solid rgb(243, 243, 243);
+}
+.login-form ::placeholder {
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+.login-form .form-button {
+  font-family: "Red Hat Display", sans-serif;
+  margin-top: 2rem;
+  width: 100%;
+  color: rgb(243, 243, 243);
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgb(243, 243, 243);
+  backdrop-filter: blur(6rem);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.login-form .form-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgb(243, 243, 243);
+}
+.login-form .form-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(243, 243, 243);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.login-form .form-link:hover {
+  font-style: italic;
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .login-form {
+    height: min-content;
+    width: 320px;
+  }
+}
+.products-wrapper {
+  display: flex;
+  height: 95vh;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.filter-menu {
+  width: 25%;
+  padding: 2rem;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(243, 243, 243, 0.5);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.filter-menu .filter-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 3rem;
+}
+.filter-menu .filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.filter-menu .filter-list .filter-listitem {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.filter-menu .filter-list .filter-listitem .filter-toggle {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
+.filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.product-list {
+  width: 75%;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  overflow-y: scroll;
+}
+.product-list .product-card {
+  height: auto;
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(243, 243, 243, 0.1);
+  padding-bottom: 0.5rem;
+  border-radius: 2px;
+  text-align: start;
+  flex: 0 0 calc(33.3333% - 8px);
+}
+.product-list .product-card:hover {
+  border: 1px solid rgba(243, 243, 243, 0.5);
+}
+.product-list .product-card img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.product-list .product-card .card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.product-list .product-card .card-info .card-txt {
+  flex-direction: column;
+}
+.product-list .product-card .card-info .card-txt .product-name {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(243, 243, 243);
+  margin-top: 0.5rem;
+}
+.product-list .product-card .card-info .card-txt .product-price {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+}
+.product-list .product-card .card-info .details-button {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0a0a0a;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #FFFFFF;
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.7s;
+}
+.product-list .product-card .card-info .details-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(10, 10, 10, 0.5);
+  border: 1px solid #FFFFFF;
+  letter-spacing: 2px;
+}
+
+.pagination {
+  align-self: end;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.pagination .pagination-item {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #0a0a0a;
+  color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.pagination .pagination-item:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .products-wrapper {
+    flex-direction: column;
+  }
+  .products-wrapper .filter-menu {
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    padding: 2px;
+    border: none;
+    border-radius: 1px;
+    overflow: visible;
+  }
+  .products-wrapper .filter-menu .filter-title {
+    display: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(243, 243, 243);
+  }
+  .products-wrapper .filter-menu .filter-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .products-wrapper .filter-menu .filter-list .filter-listitem {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+  }
+  .products-wrapper .filter-menu .filter-list .filter-listitem .filter-toggle {
+    text-decoration: none;
+    color: rgb(243, 243, 243);
+  }
+  .products-wrapper .filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+  }
+  .product-list {
+    margin-top: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+  .filter-listitem {
+    display: block;
+  }
+  .product-card {
+    flex: 1 1 100%;
+  }
+}
+.product-detail-page {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+/* Linkerkolom met productafbeelding en overlay */
+.product-image {
+  width: 40%;
+  position: relative;
+}
+.product-image .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 1rem;
+  background-color: rgba(243, 243, 243, 0.2);
+  backdrop-filter: blur(2rem);
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: start;
+  padding: 2rem;
+  overflow: scroll;
+}
+.product-image .image-overlay .overlaytxt_sm {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(243, 243, 243);
+  margin-bottom: 2rem;
+}
+.product-image .toggle-overlay {
+  position: absolute;
+  color: rgba(243, 243, 243, 0.75);
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  font-size: 1.618rem;
+  cursor: pointer;
+}
+.product-image .toggle-overlay:hover {
+  color: #f3f3f3;
+}
+.product-image .toggle-overlay:focus + .image-overlay {
+  display: flex;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rechter kolom met productinformatie */
+.product-info {
+  height: 100%;
+  max-height: 100vh;
+  width: 60%;
+  background-color: #0a0a0a;
+  color: rgb(243, 243, 243);
+  font-family: "Red Hat Display", sans-serif;
+  padding: 0 2rem;
+  overflow-y: scroll;
+}
+.product-info .info-heading {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+}
+.product-info .info-subheading {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+}
+.product-info .product-info-list {
+  text-decoration: none;
+}
+.product-info .infotxt_lg {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 700;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+.product-info .fa-star {
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  margin-right: 1px;
+  border: none;
+}
+
+.cart-button {
+  display: inline-block;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0a0a0a;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.7s;
+}
+.cart-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgb(243, 243, 243);
+}
+
+.tech-specs {
+  margin-top: 3rem;
+  /* LINE */
+}
+.tech-specs .line {
+  width: 100%;
+  height: 1px;
+  background: #363636;
+}
+.tech-specs .specs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.tech-specs .specs-wrapper .specs-left, .tech-specs .specs-wrapper .specs-right {
+  width: 50%;
+}
+.tech-specs .specs-wrapper .product-info-list i {
+  width: 40px;
+  margin-right: 1.2rem;
+  color: rgb(243, 243, 243);
+}
+
+/* MEDIA QUERIES. */
+@media (min-width: 320px) and (max-width: 768px) {
+  .product-image .image-overlay {
+    border-radius: 0 0.5rem;
+  }
+  .product-image .image-overlay .overlaytxt_sm {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #363636;
+    margin-bottom: 1rem;
+  }
+  .product-info {
+    margin-top: 2rem;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+  .product-detail-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-detail-page .product-image {
+    width: 100%;
+    position: relative;
+  }
+  .tech-specs .specs-wrapper {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .tech-specs .specs-wrapper .specs-left, .tech-specs .specs-wrapper .specs-right {
+    width: 100%;
+  }
+  .tech-specs .specs-wrapper .product-info-list i {
+    width: 40px;
+    margin-right: 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
