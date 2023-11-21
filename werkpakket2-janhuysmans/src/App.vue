@@ -4,7 +4,7 @@
   export default {
     data() {
       return {
-            topVideoSource: '@/assets/media/auro_vid2.mp4',
+        imageSource: "src/assets/auro_vid2.mp4"
           }
       },
       methods: {
@@ -42,7 +42,7 @@
     </nav>
 
     <section class="showcase">
-        <video class="video-bkg" v-bind:src="topVideoSource" muted loop autoplay></video>
+        <video class="video-bkg" v-bind:src="imageSource" muted loop autoplay></video>
         <div class="overlay"></div>
         <div class="showcase-text">
             <h2 class="txt-heading_xl" >Find your vibe.</h2>
@@ -100,21 +100,6 @@
                 rhythms of modernity and the timeless grace of a bygone age.
                 Let AURO become an extension of you, enriching life and proving that in the
                 midst of the cacophony, music could be a sanctuary, and innovation could be a timeless marvel.</h3>
-    </section>
-
-<!-- HERO PIECE -- CHANGE NAMES   -->
-
-    <section class="banner-wide mt-lg mb-lg bg-darkest">
-        <div class="banner-brand">
-            <div>
-                <h1 class="brand-title">AuroVision</h1>
-                <p class="brand-subtitle">Experience more.</p>
-            </div>
-        </div>
-        <div class="hero-banner">
-            <h3 class="txt-subheader">The future is now.</h3>
-            <button type="button" class="main-button">Get AuroVision</button>
-        </div>
     </section>
 
   <footerComponent/>
