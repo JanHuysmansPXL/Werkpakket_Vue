@@ -1,0 +1,182 @@
+[
+    {
+      "id": 1,
+      "title": "Auro Nubia EarPods",
+      "description": "Immerse yourself in the future of sound with Auro Nubia EarPods. Precision-engineered for unparalleled audio quality, these earbuds redefine your listening experience.",
+      "image": "auro_nubia.jpg",
+      "price": 199.99,
+      "vatRate": 21,
+      "stock": 50
+    },
+    {
+      "id": 2,
+      "title": "Auro Phonos Wireless EarPods",
+      "description": "Cutting-edge technology meets timeless elegance with Auro Phonos Wireless EarPods. Experience the freedom of true wireless connectivity and pristine audio reproduction.",
+      "image": "auro_phonos.jpg",
+      "price": 219.99,
+      "vatRate": 21,
+      "stock": 75
+    },
+    {
+      "id": 3,
+      "title": "Auro Nova True Wireless Stereo Earbuds",
+      "description": "Step into the future with Auro Nova True Wireless Stereo Earbuds. These earbuds seamlessly blend futuristic design with advanced audio technology, providing an immersive sonic journey.",
+      "image": "auro_nova.jpg",
+      "price": 179.99,
+      "vatRate": 21,
+      "stock": 100
+    },
+    {
+      "id": 4,
+      "title": "Auro Cosmos Active Noise-Canceling EarPods",
+      "description": "Escape into a world of pure sound with Auro Cosmos Active Noise-Canceling EarPods. Immerse yourself in your favorite music without distractions, wherever you go.",
+      "image": "auro_cosmos.jpg",
+      "price": 249.99,
+      "vatRate": 21,
+      "stock": 60
+    },
+    {
+      "id": 5,
+      "title": "Auro Celestial In-Ear Monitors",
+      "description": "Unleash the celestial sounds with Auro Celestial In-Ear Monitors. Crafted for audiophiles, these monitors deliver a harmonious blend of clarity and depth.",
+      "image": "auro_celestial.jpg",
+      "price": 299.99,
+      "vatRate": 21,
+      "stock": 90
+    },
+    {
+      "id": 6,
+      "title": "Auro Quantum Retro EarPods",
+      "description": "Embark on a nostalgic journey with Auro Quantum Retro EarPods. Infused with quantum technology, these earbuds offer a perfect balance of vintage charm and futuristic performance.",
+      "image": "auro_quantum_retro.jpg",
+      "price": 269.99,
+      "vatRate": 21,
+      "stock": 70
+    },
+    {
+      "id": 7,
+      "title": "Auro Luxe Gold Edition Earbuds",
+      "description": "Indulge in luxury with Auro Luxe Gold Edition Earbuds. Meticulously crafted for those with discerning taste, these earbuds redefine elegance and audio excellence.",
+      "image": "auro_luxe_gold.jpg",
+      "price": 449.99,
+      "vatRate": 21,
+      "stock": 30
+    },
+    {
+      "id": 8,
+      "title": "Auro Infinity Wireless Charging EarPods",
+      "description": "Experience limitless possibilities with Auro Infinity Wireless Charging EarPods. Effortlessly charge on the go and enjoy continuous, high-quality audio.",
+      "image": "auro_infinity_wireless.jpg",
+      "price": 399.99,
+      "vatRate": 21,
+      "stock": 40
+    },
+    {
+      "id": 9,
+      "title": "Auro Spectrum Neon Glow EarPods",
+      "description": "Dive into a spectrum of vibrant sound with Auro Spectrum Neon Glow EarPods. Illuminate your audio experience and stand out with these futuristic, neon-infused earbuds.",
+      "image": "auro_spectrum_neon.jpg",
+      "price": 229.99,
+      "vatRate": 21,
+      "stock": 80
+    },
+    {
+      "id": 10,
+      "title": "Auro Echo Studio Monitor Earbuds",
+      "description": "Master the art of audio with Auro Echo Studio Monitor Earbuds. Precision-tuned for studio-quality sound, these earbuds redefine your perception of clarity and detail.",
+      "image": "auro_echo_studio.jpg",
+      "price": 349.99,
+      "vatRate": 21,
+      "stock": 45
+    },
+    {
+      "id": 11,
+      "title": "Auro Aurora Minimalist EarPods",
+      "description": "Enter a world of simplicity and sophistication with Auro Aurora Minimalist EarPods. Experience a minimalist design that seamlessly integrates with your lifestyle.",
+      "image": "auro_aurora_minimalist.jpg",
+      "price": 199.99,
+      "vatRate": 21,
+      "stock": 65
+    },
+    {
+      "id": 12,
+      "title": "Auro Bass Harmony Pro EarPods",
+      "description": "Harmonize with deep bass and precision with Auro Bass Harmony Pro EarPods. Elevate your audio experience and feel the rhythm like never before.",
+      "image": "auro_bass_harmony_pro.jpg",
+      "price": 319.99,
+      "vatRate": 21,
+      "stock": 55
+    },
+    {
+      "id": 13,
+      "title": "Auro Urban Voyager EarPods",
+      "description": "Embark on an urban adventure with Auro Urban Voyager EarPods. Explore the city with style and immerse yourself in a world of dynamic audio.",
+      "image": "auro_urban_voyager.jpg",
+      "price": 289.99,
+      "vatRate": 21,
+      "stock": 85
+    },
+    {
+      "id": 14,
+      "title": "Auro Tranquil Serenity Earbuds",
+      "description": "Find serenity in every note with Auro Tranquil Serenity Earbuds. Immerse yourself in a tranquil audio oasis that transports you to a realm of pure calmness.",
+      "image": "auro_tranquil_serenity.jpg",
+      "price": 269.99,
+      "vatRate": 21,
+      "stock": 50
+    },
+    {
+      "id": 15,
+      "title": "Auro Crystal Clear Sonic EarPods",
+      "description": "Discover sonic clarity with Auro Crystal Clear Sonic EarPods. Dive into a world where every note sparkles with crystal-clear precision.",
+      "image": "auro_crystal_clear_sonic.jpg",
+      "price": 239.99,
+      "vatRate": 21,
+      "stock": 50
+    },
+      {
+        "id": 16,
+        "name": "Auro Quantum Harmony EarPods",
+        "description": "Experience harmony in every note with Auro Quantum Harmony EarPods. Precision-tuned for a balanced and immersive audio experience.",
+        "image": "auro_quantum_harmony.jpg",
+        "price": 389.99,
+        "vatRate": 21,
+        "stock": 30
+      },
+      {
+        "id": 17,
+        "name": "Auro Nebula Pro Earbuds",
+        "description": "Embark on a journey through sound with Auro Nebula Pro Earbuds. Designed for audiophiles seeking unparalleled audio quality.",
+        "image": "auro_nebula_pro.jpg",
+        "price": 429.99,
+        "vatRate": 21,
+        "stock": 20
+      },
+      {
+        "id": 18,
+        "name": "Auro Zenith Wireless EarPods",
+        "description": "Reach new heights of audio excellence with Auro Zenith Wireless EarPods. Elevate your listening experience to the Zenith of perfection.",
+        "image": "auro_zenith_wireless.jpg",
+        "price": 449.99,
+        "vatRate": 21,
+        "stock": 25
+      },
+      {
+        "id": 19,
+        "name": "Auro Seraphim In-Ear Monitors",
+        "description": "Unleash the divine sound with Auro Seraphim In-Ear Monitors. Immerse yourself in an audio experience that transcends ordinary boundaries.",
+        "image": "auro_seraphim.jpg",
+        "price": 399.99,
+        "vatRate": 21,
+        "stock": 15
+      },
+      {
+        "id": 20,
+        "name": "Auro Astral Glow EarPods",
+        "description": "Ignite your senses with Auro Astral Glow EarPods. Immerse yourself in the mesmerizing glow of celestial audio brilliance.",
+        "image": "auro_astral_glow.jpg",
+        "price": 379.99,
+        "vatRate": 21,
+        "stock": 35
+      }
+    ]

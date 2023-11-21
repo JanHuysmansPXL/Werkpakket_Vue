@@ -1,10 +1,12 @@
 <script>
+  import productList from './assets/products.json'
   import footerComponent from '@/components/footerComponent.vue'
 
   export default {
     data() {
       return {
-        imageSource: "src/assets/auro_vid2.mp4"
+        imageSource: "src/assets/auro_vid2.mp4",
+        products: productList,
           }
       },
       methods: {
@@ -54,6 +56,11 @@
     <!-- PRODUCTS - CARD GALLERY -->
 
     <section class="gallery bg-darkest">
+
+        <p v-for="product in products" :key="product.id" class="text-body_md txt-light">
+    {{product.title}}
+  </p>
+
         <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
         <h3 class="txt-title_sm">Discover our products:</h3>
         <div class="cards-wrapper bg-black">
