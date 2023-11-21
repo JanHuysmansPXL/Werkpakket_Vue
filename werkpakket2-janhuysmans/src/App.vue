@@ -1,11 +1,13 @@
 <script>
-  import productList from './assets/products.json'
+  import productList from '@/assets/products.json'
   import footerComponent from '@/components/footerComponent.vue'
+  import ProductCardComponent from '@/components/ProductCardComponent.vue'
 
   export default {
     data() {
       return {
         imageSource: "src/assets/auro_vid2.mp4",
+        imageSource2: "src/assets/images/case_1.png",
         products: productList,
           }
       },
@@ -16,8 +18,10 @@
 
       },
       components: {
-        footerComponent,
-      },
+    footerComponent,
+    ProductCardComponent,
+    ProductCardComponent
+},
     }
 </script>
 
@@ -99,6 +103,7 @@
         </div>
     </section>
 
+
 <!-- TRANSITION-PIECE  -->
     <section class="home-transition">
             <h1 class="txt-subheader">Feel the Future.</h1>
@@ -109,7 +114,14 @@
                 midst of the cacophony, music could be a sanctuary, and innovation could be a timeless marvel.</h3>
     </section>
 
-  <footerComponent/>
+    
+    <section class="gallery bg-darkest">
+        <div class="cards-wrapper bg-black">
+            <ProductCardComponent/>
+        </div>
+    </section>
+
+<footerComponent/>
 
 </template>
 
