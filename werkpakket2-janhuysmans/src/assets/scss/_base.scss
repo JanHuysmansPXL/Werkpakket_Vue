@@ -1,0 +1,168 @@
+/* GLOBAL SETTINGS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BASE COLORS */
+$color-white: #FFFFFF;
+$color-light: rgb(243, 243, 243);
+
+$color-primary: #333;
+$color-secondary: #666;
+
+$color-black: #000000;
+$color-darkest: #0a0a0a;
+$color-dark: #363636;
+
+$color-transparant: rgba(255,255,255,0.05);
+
+/* FONT SIZES */
+$fs-sm: 1rem;
+$fs-md: 1.618rem;
+$fs-lg: 2.618rem;
+$fs-xl: 4.236rem;
+$fs-xxl: 6.854rem;
+
+/* SCREEN SIZES */
+$screen-xs: 320px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+/* BACKGROUND COLORS */
+.bg-white {background-color: $color-white;}
+.bg-light {background-color: $color-light;}
+
+.bg-primary {background-color: $color-primary;}
+.bg-secondary {background-color: $color-secondary;}
+
+.bg-darkest {background-color: $color-darkest;}
+.bg-black {background-color: $color-black;}
+
+.bg-transparant {background-color: rgba(255,255,255,0.05);}
+
+/* TEXT COLORS */
+.txt-white {color: $color-white;}
+.txt-light {color: $color-light;}
+
+.txt-primary {color: $color-primary;}
+.txt-secondary {color: $color-secondary;}
+
+.txt-darkest {color: $color-darkest;}
+.txt-black {color: $color-black;}
+
+/* BASE FONTS - TYPESET */
+$font-redhat-display: 'Red Hat Display', sans-serif;
+
+// PADDING / MARGIN - SETUP
+$margin-xs: .5rem;
+$margin-sm: 1rem;
+$margin-md: 2rem;
+$margin-lg: 3rem;
+$margin-xl: 5rem;
+
+$padding-xs: .5rem;
+$padding-sm: 1rem;
+$padding-md: 2rem;
+$padding-lg: 3rem;
+$padding-xl: 5rem;
+
+/* MARGIN / PADDING - UTILITY CLASSES*/
+.mx-auto { margin: 0 auto }
+
+.mt-0 { margin-top: 0}
+.mt-xs { margin-top: $margin-xs;}
+.mt-sm { margin-top: $margin-sm;}
+.mt-md { margin-top: $margin-md;}
+.mt-lg { margin-top: $margin-lg;}
+.mt-xl { margin-top: $margin-xl;}
+
+.mb-0 { margin-bottom: 0}
+.mb-xs { margin-bottom: $margin-xs;}
+.mb-sm { margin-bottom: $margin-sm;}
+.mb-md { margin-bottom: $margin-md;}
+.mb-lg { margin-bottom: $margin-lg;}
+.mb-xl { margin-bottom: $margin-xl;}
+
+.ms-0 { margin-top: 0}
+.ms-xs { margin-left: $margin-xs;}
+.ms-sm { margin-left: $margin-sm;}
+.ms-md { margin-left: $margin-md;}
+.ms-lg { margin-left: $margin-lg;}
+.ms-xl { margin-left: $margin-xl;}
+
+.me-0 { margin-right: 0}
+.me-xs { margin-right: $margin-xs;}
+.me-sm { margin-right: $margin-sm;}
+.me-md { margin-right: $margin-md;}
+.me-lg { margin-right: $margin-lg;}
+.me-xl { margin-right: $margin-xl;}
+
+.p-0 { padding: 0}
+.p-xs { padding: $padding-xs;}
+.p-sm { padding: $padding-sm;}
+.p-md { padding: $padding-md;}
+.p-lg { padding: $padding-lg;}
+.p-xl { padding: $padding-xl;}
+
+.pt-0 { padding-top: 0}
+.pt-xs { padding-top: $padding-xs;}
+.pt-sm { padding-top: $padding-sm;}
+.pt-md { padding-top: $padding-md;}
+.pt-lg { padding-top: $padding-lg;}
+.pt-xl { padding-top: $padding-xl;}
+
+.pb-0 { padding-bottom: 0}
+.pb-xs { padding-bottom: $padding-xs;}
+.pb-sm { padding-bottom: $padding-sm;}
+.pb-md { padding-bottom: $padding-md;}
+.pb-lg { padding-bottom: $padding-lg;}
+.pb-xl { padding-bottom: $padding-xl;}
+
+// Text-align classes
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* MIXINS */
+
+@mixin flexlayout() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin textStyles($transform: uppercase) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: $transform;
+}
+
+@mixin positionFromTop($topvalue) {
+  position: absolute;
+  top: $topvalue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%fullSpace {
+  width: 100%;
+  height: 100%;
+}
+
+
+

@@ -93,7 +93,7 @@
     </section>
 
 <!-- TRANSITION-PIECE  -->
-    <section class="home-transition bg-darkest">
+    <section class="home-transition">
             <h1 class="txt-subheader">Feel the Future.</h1>
             <h3 class="txt_body_xl">AURO is your companion forward.</h3>
             <h3 class="txt_body_xl">We  deliver clarity, silence, a bridge between the

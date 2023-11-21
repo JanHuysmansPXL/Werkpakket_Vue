@@ -1,0 +1,195 @@
+@use "base" as *;
+
+.product-detail-page {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+
+/* Linkerkolom met productafbeelding en overlay */
+.product-image {
+  width: 40%;
+  position: relative;
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 $padding-sm;
+    background-color: transparentize($color-light, .8);
+    backdrop-filter: blur(2rem);
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: start;
+    padding: $padding-md;
+    overflow: scroll;
+    .overlaytxt_sm {
+      font-family: $font-redhat-display;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $color-light;
+      margin-bottom: $margin-md;
+    }
+  }
+
+  .toggle-overlay {
+    position: absolute;
+    color: rgba($color-light, 0.75);
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    font-size: $fs-md;
+    cursor: pointer;
+    &:hover {
+      color: rgba($color-light, 1);
+    }
+  }
+  .toggle-overlay:focus + .image-overlay {
+    display: flex;
+  }
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rechter kolom met productinformatie */
+.product-info {
+  height: 100%;
+  max-height: 100vh;
+  width: 60%;
+  background-color: $color-darkest;
+  color: $color-light;
+  font-family: $font-redhat-display;
+  padding: 0 $padding-md;
+  overflow-y: scroll;
+  .info-heading {
+    font-family: $font-redhat-display;
+    font-size: $fs-lg;
+    font-weight: 500;
+    color: $color-light;
+  }
+  .info-subheading {
+    font-family: $font-redhat-display;
+    font-size: $fs-md;
+    font-weight: 300;
+    color: $color-light;
+  }
+  .product-info-list {
+    text-decoration: none;
+  }
+  .infotxt_lg {
+    font-family: $font-redhat-display;
+    font-size: $fs-lg;
+    font-weight: 700;
+    color: $color-light;
+    margin-bottom: $margin-xs;
+    list-style-type: none;
+  }
+  .fa-star {
+    color: $color-light;
+    font-size: 1rem;
+    margin-right: 1px;
+    border: none;
+  }
+}
+
+.cart-button {
+  display: inline-block;
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-darkest;
+  background-color: $color-light;
+  border: 1px solid $color-light;
+  padding: $padding-xs $padding-sm;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.7s;
+  &:hover {
+    color: $color-light;
+    background-color: transparentize($color-darkest, .5);
+    border: 1px solid $color-light;
+  }
+}
+
+.tech-specs {
+  margin-top: $margin-lg;
+  /* LINE */
+  .line {
+    width: 100%;
+    height: 1px;
+    background: $color-dark;
+  }
+  .specs-wrapper {
+    @include flexlayout();
+    justify-content: space-between;
+    .specs-left, .specs-right {
+      width: 50%;
+    }
+
+    .product-info-list i {
+      width: 40px;
+      margin-right: 1.2rem;
+      color: $color-light;
+    }
+  }
+}
+
+/* MEDIA QUERIES. */
+
+@media (min-width: $screen-xs) and (max-width: $screen-md) {
+  .product-image {
+    .image-overlay {
+      border-radius: 0 $padding-xs;
+      .overlaytxt_sm {
+        font-family: $font-redhat-display;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $color-dark;
+        margin-bottom: $margin-sm;
+      }
+    }
+  }
+  .product-info {
+    margin-top: $margin-md;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+  .product-detail-page {
+    display: flex;
+    flex-direction: column;
+    .product-image {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .tech-specs {
+    .specs-wrapper {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+      .specs-left, .specs-right {
+        width: 100%;
+      }
+      .product-info-list i {
+        width: 40px;
+        margin-right: .8rem;
+      }
+    }
+  }
+}
+
+

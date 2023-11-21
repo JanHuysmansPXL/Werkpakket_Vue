@@ -1,0 +1,409 @@
+@use "base" as *;
+
+
+/* UTILITIES */
+
+/* GRID */
+
+.container-fluid {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE CONTAINER SIZES */
+
+@media (min-width: $screen-md) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: $screen-lg) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: $screen-xl) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: $screen-xxl) {
+  .container {
+    max-width: 1370px;
+  }
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  backdrop-filter: blur(.5rem);
+  background: linear-gradient(rgba($color-light, .01), rgba($color-light,.01));
+  .navbar-brand {
+    .brand-link {
+      text-decoration: none;
+      font-family: $font-redhat-display;
+      color: $color-light;
+      font-weight: 700;
+      font-size: $fs-md;
+      transition: 1.2s;
+      &:hover {
+        color: rgba($color-light, 0.9);
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .navbar-links {
+    .navbar-list {
+      .navbar-listitem {
+        list-style-type: none;
+        color: $color-primary;
+        display: inline;
+        .login-button {
+          text-decoration: none;
+          color: $color-darkest;
+          background-color: $color-light;
+          font-family: $font-redhat-display;
+          font-weight: 500;
+          font-size: .95rem;
+          border: 1px solid $color-darkest;
+          border-radius: 999px;
+          transition: all .5s;
+          padding: 6px 12px;
+          margin-left: 2rem;
+          &:hover {
+            font-weight: 500;
+            background-color: $color-transparant;
+            color: $color-light;
+            border: 1px solid $color-light;
+          }
+          .fa-user-circle {
+            margin-right: .5rem;
+          }
+        }
+        .navbar-link {
+          text-decoration: none;
+          color: $color-white;
+          font-family: $font-redhat-display;
+          font-weight: 500;
+          font-size: .95rem;
+          margin-left: 1.25rem;
+          padding-bottom: 6px;
+          transition: all .5s;
+          &:hover {
+            font-weight: 500;
+            border-bottom: 2px solid $color-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* BRAND TEXT */
+
+.brand-title {
+  @include textStyles();
+  font-family: $font-redhat-display;
+  font-size: 3rem;
+  font-weight: 700;
+  color: $color-white;
+}
+
+.brand-subtitle {
+  @include textStyles;
+  font-family: $font-redhat-display;
+  font-size: 1rem;
+  color: $color-white;
+}
+
+/* MAIN TEXT */
+
+.txt-heading_xxl {
+  font-family: $font-redhat-display;
+  font-size: $fs-xxl;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: 2rem;
+}
+
+.txt-heading_xl {
+  font-family: $font-redhat-display;
+  font-size: $fs-xl;
+  font-weight: 500;
+  color: $color-light;
+  margin-bottom: .25rem;
+}
+.txt-heading_lg {
+  font-family: $font-redhat-display;
+  font-size: $fs-lg;
+  font-weight: 300;
+  color: $color-light;
+  margin-bottom: .5rem;
+}
+.txt-heading_md {
+  font-family: $font-redhat-display;
+  font-size: $fs-md;
+  font-weight: 300;
+  color: $color-light;
+  margin-bottom: .5rem;
+}
+
+.txt-subheader {
+  font-family: $font-redhat-display;
+  font-size: $fs-md;
+  font-weight: 500;
+  color: $color-light;
+  margin-bottom: 1rem;
+}
+
+.txt-title_sm {
+  font-family: $font-redhat-display;
+  font-size: $fs-md;
+  font-weight: 200;
+  color: $color-light;
+  margin-bottom: .2rem;
+}
+
+.txt-body_md {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 400;
+  color: $color-white;
+  margin-bottom: .2rem;
+}
+
+.txt_body_lg {
+  font-family: $font-redhat-display;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $color-white;
+  margin-bottom: .2rem;
+}
+
+.txt_body_xl {
+  font-family: $font-redhat-display;
+  font-size: $fs-md;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: $color-white;
+  margin-bottom: .2rem;
+}
+
+.infotxt_sm {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: .7rem;
+  list-style-type: none;
+}
+.infotxt_strong {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 500;
+  color: $color-white;
+  margin-bottom: .7rem;
+  list-style-type: none;
+}
+
+/* BUTTONS */
+
+.main-button {
+  width: 170px;
+  height: 45px;
+  font-family: $font-redhat-display;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $color-white;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s;
+  &:hover {
+    background-color: $color-light;
+    color: $color-darkest;
+  }
+}
+
+.cta-button {
+  display: block;
+  width: 170px;
+  height: 45px;
+  font-family: $font-redhat-display;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $color-white;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s;
+  &:hover {
+    background-color: $color-light;
+    color: $color-darkest;
+  }
+}
+
+.showcase-button {
+  display: inline-block;
+  text-decoration: none;
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 500;
+  color: $color-light;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $color-light;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  margin-top: $margin-md;
+  &:hover {
+    background-color: rgba(255,255,255, 0.15);
+    color: $color-light;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  /* CHILD ELEMENT (OVERLAY) GEKOPPELD DOOR DEZE .class TE VERMELDEN NA HET HOVER ELEMENT (CARD)) */
+  &:hover .card-overlay {
+    left: 0;
+    transition: all 0.7s;
+    backdrop-filter: blur(2px);
+  }
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 4rem;
+    @extend %fullSpace;
+    background-color: transparentize($color-darkest, .8);
+    color: $color-white;
+    z-index: 10;
+    @include flexlayout();
+    flex-direction: column;
+    align-items: start;
+    .card-overlay-heading {
+      font-family: $font-redhat-display;
+      font-size: 1.6rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    .card-overlay-paragraph {
+      font-family: $font-redhat-display;
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+    .card-overlay-button {
+      display: block;
+      width: 150px;
+      padding: 10px 0;
+      color: $color-primary;
+      text-decoration: none;
+      text-align: center;
+      background-color: $color-white;
+      font-family: $font-redhat-display;
+      font-size: $fs-sm;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border: 1px solid $color-light;
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.7s;
+      &:hover{
+        color: $color-light;
+        background-color: transparentize($color-darkest, .5);
+        border: 1px solid $color-white;
+      }
+    }
+  }
+  .card-image {
+    @extend %fullSpace;
+    object-fit: cover;
+    padding: 5px;
+  }
+}
+
+.gallery_header {
+  width: 100%;
+  padding: $padding-xs $padding-md;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: $padding-sm $padding-md;
+  @include flexlayout();
+  flex-direction: column;
+  .footer-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .footer-social-media {
+    .social-media {
+      display: flex;
+      width: 240px;
+      justify-content: space-evenly;
+      margin-bottom: $margin-sm;
+      .social-media-item {
+        list-style-type: none;
+        .social-media-link {
+          text-decoration: none;
+          font-size: $fs-sm;
+          color: $color-white;
+          &:hover {
+            color: $color-light;
+            transition: all 0.7s;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    font-family: $font-redhat-display;
+    font-size: 18px;
+    color: $color-white;
+    @include textStyles(capitalize);
+  }
+}
