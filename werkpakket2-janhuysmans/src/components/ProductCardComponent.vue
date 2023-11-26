@@ -6,7 +6,6 @@
             return {
                 products: productList,
                 orderButtonText: "Order now",
-                imageSource2: "src/assets/images/case_1.png",
             }
         },
         props: {
@@ -22,7 +21,7 @@
             <p class="card-overlay-paragraph">{{ product.price }}</p>
             <a type="button" class="card-overlay-button" href="product_detail.html">{{ orderButtonText }}</a>
         </div>
-        <img class="card-image" :src="imageSource2" alt="AuroPods - Nubis">
+        <img class="card-image" :src="product.image" :alt="product.title">
     </div>
 </template>
 

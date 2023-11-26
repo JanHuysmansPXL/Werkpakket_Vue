@@ -1,12 +1,10 @@
 <script>
-  import productList from '@/assets/products.json'
-  import HeaderComponent from '@/components/HeaderComponent.vue'
-  import FooterComponent from '@/components/FooterComponent.vue'
-  import ProductCardComponent from '@/components/ProductCardComponent.vue'
-  import PopularProductsComponent from '@/components/PopularProductsComponent.vue'
+    import HeaderComponent from '@/components/HeaderComponent.vue';
+    import FooterComponent from '@/components/FooterComponent.vue';
   export default {
     data() {
       return {
+
           }
       },
       methods: {
@@ -18,9 +16,6 @@
       components: {
     HeaderComponent,
     FooterComponent,
-    ProductCardComponent,
-    ProductCardComponent,
-    PopularProductsComponent
 },
     }
 </script>
@@ -37,9 +32,7 @@
 
 <HeaderComponent/>
 
-<div id="app">
-    <router-view></router-view>
-</div>
+<h4>FILLER TO !!! DO PAGE</h4>
 
 <FooterComponent/>
 
@@ -49,3 +42,4 @@
 
 
 </style>
+
