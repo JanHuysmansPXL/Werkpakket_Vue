@@ -2,9 +2,10 @@
 
 .login-frame {
     width: 100%;
+    min-height: 80vh;
     height: 100%;
     padding: 4rem 0;
-    background: linear-gradient(rgba($color-darkest, .4), rgba($color-darkest, .9)), url("../assets/bg_1.png");
+    background: linear-gradient(rgba($color-darkest, .4), rgba($color-darkest, .9)), url("@/assets/images/bg_1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

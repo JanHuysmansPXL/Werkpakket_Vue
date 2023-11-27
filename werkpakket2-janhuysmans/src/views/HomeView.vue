@@ -38,11 +38,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
   </head>  
-  
-  <div>
-    <h1>HomeView Content</h1>
-    <!-- Andere inhoud hier -->
-  </div>
 
     <section class="showcase">
         <video class="video-bkg" v-bind:src="imageSource" muted loop autoplay></video>

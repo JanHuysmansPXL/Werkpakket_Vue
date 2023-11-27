@@ -1,6 +1,5 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
   export default {
     data() {
       return {
@@ -15,7 +14,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
       },
       components: {
     HeaderComponent,
-    FooterComponent,
 },
     }
 </script>
@@ -51,8 +49,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
     <a class="form-link" href="#">Forgot password ?</a>
   </form>
 </div>
-
-<footerComponent/>
 
 </template>
 
