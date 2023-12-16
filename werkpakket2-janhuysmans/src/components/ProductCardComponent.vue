@@ -1,15 +1,17 @@
 <script>
-  import productList from '@/assets/products.json'
+  //ProductsStore importeren.
+  import { useProductsStore } from '@/stores/productsStore.js';
 
     export default {
         data() {
             return {
-                products: productList,
+                products: useProductsStore(),
                 orderButtonText: "Order now",
             }
         },
         props: {
-        }
+
+        },
     }
 </script>
 
@@ -17,7 +19,7 @@
     <div v-for="product in products" class="card">
         <div class="card-overlay">
             <h1 class="card-overlay-heading" >{{ product.title }}</h1>
-            <p class="card-overlay-paragraph">{{ product.price }}</p>
+            <p class="card-overlay-paragraph">{{ '€ ' + product.price }}</p>
             <router-link to="/productDetail" type="button" class="card-overlay-button">{{ orderButtonText }}</router-link>
         </div>
         <img class="card-image" :src="product.image" :alt="product.title">

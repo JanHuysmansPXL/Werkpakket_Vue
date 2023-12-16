@@ -1,13 +1,12 @@
 <script>
   import ProductCardComponent from '@/components/ProductCardComponent.vue';
   import { useProductsStore } from '@/stores/productsStore.js';
-  const productsStore = useProductsStore();
 
     export default {
         data() {
             return {
                 orderButtonText: "Order now",
-                productsStore,
+                productsStore: useProductsStore(),
             }
         },
         components: {

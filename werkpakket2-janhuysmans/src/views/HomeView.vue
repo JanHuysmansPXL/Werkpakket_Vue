@@ -23,8 +23,7 @@
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,
-    ProductCardComponent,
-    PopularProductsComponent
+    PopularProductsComponent,
 },
     }
 </script>

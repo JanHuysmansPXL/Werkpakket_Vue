@@ -13,11 +13,17 @@ export const useProductsStore = defineStore('productsStore', {
     // Actions
     actions: {
         getTopProducts() {
-            // Sort products by stock in descending order
+            // Producten sorteren -> In nieuwe variabele.
             const sortedProducts = [...this.products].sort((a, b) => b.stock - a.stock);
             
-            // Return the top 4 products
+            // De eerste 4 producten slicen.
             return sortedProducts.slice(0, 4);
+          },
+        getAllProducts() {
+            // ALLE Producten definieren.
+            const allProducts = this.products;
+            // De producten terugsturen.
+            return allProducts;
           },
     },
     // Getters

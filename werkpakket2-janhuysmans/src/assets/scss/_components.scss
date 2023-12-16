@@ -325,7 +325,8 @@
     .card-overlay-heading {
       font-family: $font-redhat-display;
       font-size: 1.6rem;
-      text-align: center;
+      margin-bottom: .2rem;
+      text-align: start;
       font-weight: 500;
     }
     .card-overlay-paragraph {

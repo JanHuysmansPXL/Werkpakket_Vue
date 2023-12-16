@@ -1,29 +1,27 @@
 <script>
-  import productList from '@/assets/products.json'
   import HeaderComponent from '@/components/HeaderComponent.vue'
   import ProductCardComponent from '@/components/ProductCardComponent.vue'
-  import PopularProductsComponent from '@/components/PopularProductsComponent.vue'
+
+  //ProductStore importeren.
+  import { useProductsStore } from '@/stores/productsStore.js';
 
   export default {
     data() {
       return {
-        imageSource: "src/assets/auro_vid2.mp4",
-        imageSource2: "src/assets/images/case_1.png",
-        products: productList,
+        detailButtonText: "details",
+        productsStore: useProductsStore(),
           }
       },
       methods: {
-
+        
       },
       computed: {
-
+        allProducts() {return this.productsStore.getAllProducts()}
       },
       components: {
-    HeaderComponent,
-    ProductCardComponent,
-    ProductCardComponent,
-    PopularProductsComponent
-},
+        HeaderComponent,
+        ProductCardComponent,
+      },
     }
 </script>
 
@@ -56,7 +54,20 @@
       </ul>
     </aside>
     <main class="product-list">
-      <!-- Voeg meer productkaarten toe -->
+
+
+      <div v-for="product in allProducts" :key="product.id" class="product-card">
+        <img :src="product.image" :alt="product.title">
+        <div class="card-info">
+          <div class="card-txt">
+            <h3 class="product-name" >{{ product.title }}</h3>
+            <p class="product-price">{{ '€ ' + product.price }}</p>
+          </div>
+          <router-link to="/productDetail" type="button" class="details-button">{{ detailButtonText }}</router-link>
+        </div>
+      </div>
+
+      <!-- Voeg meer productkaarten toe 
       <div class="product-card">
         <img src="@/assets/images/gallery_4.png" alt="Product 1 - Nubis">
         <div class="card-info">
@@ -146,7 +157,7 @@
           </div>
           <a href="product_detail.html" class="details-button">Details</a>
         </div>
-      </div>
+      </div>-->
     </main>
     <!--EINDE DIV !-->
   </div>
