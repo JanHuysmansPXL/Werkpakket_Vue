@@ -7,6 +7,7 @@
   export default {
     data() {
       return {
+        productList
           }
       },
       methods: {
@@ -20,7 +21,7 @@
     FooterComponent,
     ProductCardComponent,
     ProductCardComponent,
-    PopularProductsComponent
+    PopularProductsComponent,
 },
     }
 </script>

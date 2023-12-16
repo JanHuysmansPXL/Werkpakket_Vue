@@ -1,13 +1,14 @@
 <script>
-  import productList from '@/assets/products.json'
   import ProductCardComponent from '@/components/ProductCardComponent.vue';
   import productsData from '@/assets/products.json'; // Pad naar je JSON-bestand
+  import { useProductsStore } from '@/stores/productsStore.js';
 
     export default {
         data() {
             return {
                 products: [],
                 orderButtonText: "Order now",
+                store: useProductsStore(),
             }
         },
         components: {

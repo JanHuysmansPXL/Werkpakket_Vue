@@ -1,13 +1,22 @@
 import '@/assets/scss/main.scss'
 
-import { createApp } from 'vue'
+// Vue Importeren.
+import { createApp } from 'vue';
 
-// Methode v2 - VIA APART BESTAND - Importeren Router uit index.JS
-import router from './router'
-import App from './App.vue'
+// Pinia Importeren.
+import {createPinia} from 'pinia';
 
-const app = createApp(App)
+// Importeren Router uit index.JS
+import router from './router';
+import App from './App.vue';
+
+// App + Pinia aanmaken
+const app = createApp(App);
+const pinia = createPinia();
 
 // app.use -> Betekent zeg tegen 'App' -> Gebruik router. that's it.
-app.use(router)
+app.use(router);
+app.use(pinia);
+
+// app mounten in id: #app -> zie div in index.html
 app.mount('#app')

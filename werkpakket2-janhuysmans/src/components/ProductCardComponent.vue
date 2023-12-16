@@ -9,7 +9,6 @@
             }
         },
         props: {
-          
         }
     }
 </script>
@@ -19,7 +18,7 @@
         <div class="card-overlay">
             <h1 class="card-overlay-heading" >{{ product.title }}</h1>
             <p class="card-overlay-paragraph">{{ product.price }}</p>
-            <a type="button" class="card-overlay-button" href="product_detail.html">{{ orderButtonText }}</a>
+            <router-link to="/productDetail" type="button" class="card-overlay-button">{{ orderButtonText }}</router-link>
         </div>
         <img class="card-image" :src="product.image" :alt="product.title">
     </div>
