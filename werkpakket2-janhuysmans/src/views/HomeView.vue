@@ -1,16 +1,20 @@
 <script>
-  import productList from '@/assets/products.json'
   import HeaderComponent from '@/components/HeaderComponent.vue'
   import FooterComponent from '@/components/FooterComponent.vue'
   import ProductCardComponent from '@/components/ProductCardComponent.vue'
   import PopularProductsComponent from '@/components/PopularProductsComponent.vue'
+  import ShowcaseComponent from '../components/ShowcaseComponent.vue'
+
+
+//Store importeren.
+import { useProductsStore } from '@/stores/productsStore.js';
 
   export default {
     data() {
       return {
         imageSource: "src/assets/auro_vid2.mp4",
         imageSource2: "src/assets/images/case_1.png",
-        products: productList,
+        products: useProductsStore(),
           }
       },
       methods: {
@@ -24,6 +28,7 @@
     FooterComponent,
     ProductCardComponent,
     PopularProductsComponent,
+    ShowcaseComponent
 },
     }
 </script>
@@ -38,16 +43,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
   </head>  
 
-    <section class="showcase">
-        <video class="video-bkg" v-bind:src="imageSource" muted loop autoplay></video>
-        <div class="overlay"></div>
-        <div class="showcase-text">
-            <h2 class="txt-heading_xl">Find your vibe.</h2>
-            <p class="txt-body_md">You've never felt like this before.</p>
-            <a><router-link to="/products" class="showcase-button">Products</router-link></a>
-        </div>
-    </section>
-
+    <!-- Hero-element met video en Button naar Products -->
+    <ShowcaseComponent/>
+    
+    <!-- Toont de TOP 4 producten o.b.v. Stockhoeveelheid-->
     <PopularProductsComponent/>
 
 <!-- TRANSITION-PIECE  -->
