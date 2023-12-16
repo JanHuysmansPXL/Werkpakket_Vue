@@ -20,7 +20,6 @@
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,
-    ProductCardComponent,
     PopularProductsComponent,
 },
     }

@@ -43,9 +43,9 @@
         <video class="video-bkg" v-bind:src="imageSource" muted loop autoplay></video>
         <div class="overlay"></div>
         <div class="showcase-text">
-            <h2 class="txt-heading_xl" >Find your vibe.</h2>
+            <h2 class="txt-heading_xl">Find your vibe.</h2>
             <p class="txt-body_md">You've never felt like this before.</p>
-            <a class="showcase-button" href="products.html">Explore</a>
+            <a><router-link to="/products" class="showcase-button">Products</router-link></a>
         </div>
     </section>
 

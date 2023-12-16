@@ -3,14 +3,26 @@ import HeaderComponent from '@/components/HeaderComponent.vue';
   export default {
     data() {
       return {
-
+        welcome: 'Welcome',
+        usernameLabel: 'Username',
+        usernameInput: '',
+        passwordLabel: 'Password',
+        formButtonText: 'Log in',
+        forgotPasswordText: 'Forgot password ?',
+        
           }
       },
       methods: {
-
+        submitForm() {
+          console.log("inzenden van formulier opgevangen");
+        },
       },
       computed: {
-
+        addWelcome() {
+          let welcomeText = '';
+          welcomeText = this.welcome + ' ' + this.usernameInput;
+          return welcomeText;
+        }
       },
       components: {
     HeaderComponent,
@@ -36,17 +48,18 @@ import HeaderComponent from '@/components/HeaderComponent.vue';
     2 - Een mogelijkheid om een nieuw paswoord aan te vragen.
 -->
 <div class="container-fluid login-frame">
-  <form class="login-form">
-    <h3 class="login-title">Welcome.</h3>
+  <form class="login-form" v-on:submit.prevent="submitForm()">
+    <h3 v-if="usernameInput" class="txt-title_sm"> {{ addWelcome }}</h3>
+    <h3 v-else class="txt-title_sm"> {{ welcome }}</h3>
 
-    <label class="login-label" for="username">Username</label>
-    <input class="login-input_txt" type="text" placeholder="Email or Phone" id="username" required>
+    <label class="login-label" for="username">{{ usernameLabel }}</label>
+    <input v-model="usernameInput" class="login-input_txt" type="text" placeholder="Username" id="username" required>
 
-    <label class="login-label" for="password">Password</label>
+    <label class="login-label" for="password">{{ passwordLabel }}</label>
     <input class="login-input_txt" type="password" placeholder="Password" id="password" required>
 
-    <button class="button form-button">Sign in</button>
-    <a class="form-link" href="#">Forgot password ?</a>
+    <button type="submit" class="button form-button" v-on:submit.prevent="submitForm()" >{{ formButtonText}}</button>
+    <a class="form-link" href="#"> {{ forgotPasswordText }}</a>
   </form>
 </div>
 

@@ -1,33 +1,33 @@
 
 <script>
 
-import productList from '@/assets/products.json'
+//Store importeren.
+import { useProductsStore } from '@/stores/productsStore.js';
 
 export default {
     data() {
-        return { products: productList }
+        return {
+            productsStore: useProductsStore(),
+             }
         },
         methods:{},
         computed: {
-            sortedProductList() {
-                let sortedProductsByStock = this.products;
-                sortedProductsByStock = sortedProductsByStock.sort((a,b) => {
-                return a.stock - b.stock;
-            })
+
         },
         props: {}
     }
-}
 </script>
 
 <template>
+
+    <!-- HEAD SECTION WITH INTRO -->
     <section class="gallery bg-darkest">
         <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
         <h3 class="txt-title_sm">Discover our popular products:</h3>
-        <div  v-for="item in sortedProducts" :key="item" class="cards-wrapper bg-black">
+        <div  v-for="item in productsStore.productList" :key="item" class="cards-wrapper bg-black">
             <div class="card">
                 <div class="card-overlay">
-                    <h1 class="card-overlay-heading">Auro Steroid</h1>
+                    <h1 class="card-overlay-heading">{{ productsStore.productList.title }}</h1>
                     <p class="card-overlay-paragraph">€299</p>
                     <router-link to="/productDetail" type="button" class="card-overlay-button"> Order now</router-link>
                 </div>
@@ -36,7 +36,26 @@ export default {
         </div>
     </section>
 
-    <!-- POPULAR PRODUCTS - CARD GALLERY -->
+    <!-- PRODUCTS SECTION WITH STORED ITEMS -->
+    <section class="gallery bg-darkest">
+        <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
+        <h3 class="txt-title_sm">Discover our popular products:</h3>
+        <div class="cards-wrapper bg-black">
+            <div v-for="item in productsStore" :key="id" class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">Auro Steroid</h1>
+                    <p class="card-overlay-paragraph">€299</p>
+                    <router-link to="/productDetail" type="button" class="card-overlay-button"> Order now</router-link>
+                </div>
+                <img class="card-image" src="./../assets/images/gallery_3.png" alt="AuroPods - Nubis">
+            </div>
+        </div>
+    </section>
+
+
+</template>
+
+    <!-- POPULAR PRODUCTS - CARD GALLERY 
     <section class="gallery bg-darkest">
         <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
         <h3 class="txt-title_sm">Discover our popular products:</h3>
@@ -74,8 +93,8 @@ export default {
                 <img class="card-image" src="./../assets/images/case_4.png" alt="Auropods - Fluxus">
             </div>
         </div>
-    </section>
-</template>
+    </section> -->
+
 
 
 
