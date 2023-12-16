@@ -8,7 +8,9 @@ export default {
                     "youtube": "fab fa-youtube",
                     "snapchat": "fab fa-snapchat"
                 },
-                copyRight: "© AURO // All rights reserved."
+                brandTitle: 'AURO',
+                brandSubtitle: 'Feel the Future.',
+                copyright: "© AURO // All rights reserved."
             }
         },
         props: {
@@ -23,8 +25,8 @@ export default {
 <footer class="footer bg-darkest">
     <div class="footer-header">
         <div>
-            <h1 class="brand-title">AURO</h1>
-            <p class="brand-subtitle">Feel the Future.</p>
+            <h1 class="brand-title">{{ brandTitle }}</h1>
+            <p class="brand-subtitle">{{ brandSubtitle }}</p>
         </div>
     </div>
     <div class="footer-social-media">
@@ -36,7 +38,7 @@ export default {
         </ul>
     </div>
     <div class="footer-copyright">
-        <p class="footer-copyright-paragraph">{{ copyRight }}</p>
+        <p class="footer-copyright-paragraph">{{ copyright }}</p>
     </div>
 </footer>
 </template>

@@ -8,15 +8,23 @@ import productsData from '@/assets/products.json'; // Pad naar het JSON-bestand
 export const useProductsStore = defineStore('productsStore', {
  // State
     state: () => ({
-        productList: productsData,
+        products: productsData,
     }),
     // Actions
     actions: {
-
+        getTopProducts() {
+            // Sort products by stock in descending order
+            const sortedProducts = [...this.products].sort((a, b) => b.stock - a.stock);
+            
+            // Return the top 4 products
+            return sortedProducts.slice(0, 4);
+          },
     },
     // Getters
     getters: {
-        
+        productCount(state) {
+            return state.products.length;
+        },
     }
 
 })
