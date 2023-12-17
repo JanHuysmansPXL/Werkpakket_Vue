@@ -63,101 +63,10 @@
             <h3 class="product-name" >{{ product.title }}</h3>
             <p class="product-price">{{ '€ ' + product.price }}</p>
           </div>
-          <router-link to="/productDetail" type="button" class="details-button">{{ detailButtonText }}</router-link>
+          <router-link :to="'/detailTest/' + product.id" type="button" class="details-button">{{ detailButtonText }}</router-link>
+       <!-- ROUTE PARAMS HIERBOVEN ZIE TEST !!  <router-link to="/productDetail" type="button" class="details-button">{{ detailButtonText }}</router-link> -->
         </div>
       </div>
-
-      <!-- Voeg meer productkaarten toe 
-      <div class="product-card">
-        <img src="@/assets/images/gallery_4.png" alt="Product 1 - Nubis">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Nubis</h3>
-            <p class="product-price">€329</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/case_4.png" alt="Product 2">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Fluxus</h3>
-            <p class="product-price">€249</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/gallery_3.png" alt="Product 3">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Steroid</h3>
-            <p class="product-price">€299</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/pods_2.png" alt="Product 4">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Zulu</h3>
-            <p class="product-price">€319</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/aurolink_1.png" alt="Product 5">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >AuroLink</h3>
-            <p class="product-price">€199</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/aurovision_1.png" alt="Product 6">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >AuroVision</h3>
-            <p class="product-price">€1899</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/case_1.png" alt="Product 7">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Nova</h3>
-            <p class="product-price">€249</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/case_2.png" alt="Product 8">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Vibe</h3>
-            <p class="product-price">€189</p>
-          </div>
-          <a href="#" class="details-button">Details</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="@/assets/images/pods_1.png" alt="Product 9">
-        <div class="card-info">
-          <div class="card-txt">
-            <h3 class="product-name" >Auro Nova</h3>
-            <p class="product-price">€249</p>
-          </div>
-          <a href="product_detail.html" class="details-button">Details</a>
-        </div>
-      </div>-->
     </main>
     <!--EINDE DIV !-->
   </div>

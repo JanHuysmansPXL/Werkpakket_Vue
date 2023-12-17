@@ -8,6 +8,7 @@ import CartView from '@/views/CartView.vue'
 import CheckoutView from '@/views/CheckoutView.vue'
 import LoginView from '@/views/LoginView.vue'
 import ConfirmationView from '@/views/ConfirmationView.vue'
+import detailTestView from '@/views/detailTestView.vue'
 
 import NotFound from '@/views/PageNotFound.vue'
 
@@ -43,6 +44,10 @@ const router = createRouter({
         { 
             path: '/productdetail', 
             component: ProductDetailView   
+        },
+        { 
+            path: '/detailTest/:id', 
+            component: detailTestView  
         },
         { 
             path: '/login', 

@@ -6,7 +6,6 @@ export default {
         return {
             // Images
             imageSource: "src/assets/auro_vid2.mp4",
-            imageSource2: "src/assets/images/case_1.png",
             // Gallery
             showcaseTitle: 'Find your vibe.',
             showcaseSubtitle: 'You \'ve never felt like this before.',
@@ -14,13 +13,8 @@ export default {
              }
         },
         methods:{},
-        computed: {
-            // computed property om de top 4 producten te krijgen.
-            topProducts() {
-            return this.productsStore.getTopProducts();
-    },
-        },
-        props: {}
+        computed: {},
+        props: {},
     }
 </script>
 
