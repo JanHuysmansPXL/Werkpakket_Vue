@@ -63,7 +63,7 @@
             <h3 class="product-name" >{{ product.title }}</h3>
             <p class="product-price">{{ '€ ' + product.price }}</p>
           </div>
-          <router-link :to="'/detailTest/' + product.id" type="button" class="details-button">{{ detailButtonText }}</router-link>
+          <router-link :to="'/ProductDetail/' + product.id" type="button" class="details-button">{{ detailButtonText }}</router-link>
        <!-- ROUTE PARAMS HIERBOVEN ZIE TEST !!  <router-link to="/productDetail" type="button" class="details-button">{{ detailButtonText }}</router-link> -->
         </div>
       </div>

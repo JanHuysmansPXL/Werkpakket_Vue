@@ -1,50 +1,26 @@
 <script>
-
-import { useProductsStore } from '@/stores/productsStore.js';
-import { useCartStore } from '@/stores/cartStore.js';
-
+    import HeaderComponent from '@/components/HeaderComponent.vue';
+    import FooterComponent from '@/components/FooterComponent.vue';
   export default {
     data() {
       return {
-        cartButtonText: 'Add to cart',
-        products: null,
-        cartStore: useCartStore(),
-        // Product ID - Definieren om op te halen uit router.
-        productId: null,
-        product: {
-            id: 0,
-            title: '',
-            description: '',
-            image: '',
-            price: 0,
-            vatRate: 0,
-            stock: 0,
-          },
-        
-        // ... andere gegevens van het product
 
           }
       },
       methods: {
-      async getProductById() {
-      // Product-ID Definieren -> Gelijk aan Route ID
-      const productId = this.$route.params.id;
+        
+      },
+      computed: {
 
-      // Als er geen producten zijn -> store gebruiken.
-      if (!this.products) {
-        this.products = useProductsStore();
-      }
-      // Logica uit om het product op te halen uit de store. (product wordt product met id van route params)
-      this.product = await this.products.getProductById(productId);
-      console.log('Product:', this.product.title);
-    },
-  },
-  created() {
-    // Roept de functie aan bij het maken van de component (Created) om het product op te halen
-    console.log('Component created');
-    this.getProductById();
-  },
-}
+      },
+      components: {
+    HeaderComponent,
+    FooterComponent,
+},
+    }
+
+
+
 </script>
 
 <template>
@@ -79,11 +55,11 @@ import { useCartStore } from '@/stores/cartStore.js';
 
     <!-- Rechterkolom met productinformatie -->
     <div class="product-info">
-        <h1 class="info-heading">{{ product.title }}</h1>
-        <p class="info-subheading">{{ product.subtitle }}</p>
-        <p class="infotxt_lg mt-md mb-md">{{ '€ ' + product.price }}</p>
-        <p class="infotxt_sm"><span class="infotxt_strong">Stock:</span> {{ product.stock }}</p>
-        <p class="infotxt_sm"><span class="infotxt_strong">Ratings:</span>
+      <h1 class="info-heading">Nubis AuroPods.</h1>
+      <p class="info-subheading">Taking sound to a new dimension.</p>
+      <p class="infotxt_lg mt-md mb-md">€319</p>
+      <p class="infotxt_sm"><span class="infotxt_strong">Availability:</span> In stock.</p>
+      <p class="infotxt_sm"><span class="infotxt_strong">Ratings:</span>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>

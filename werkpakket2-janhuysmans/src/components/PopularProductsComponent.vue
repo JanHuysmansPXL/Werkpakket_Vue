@@ -54,7 +54,8 @@ export default {
                     <div class="card-overlay">
                         <h1 class="card-overlay-heading">{{ product.title }}</h1>
                         <p class="card-overlay-paragraph">{{ '€ ' + product.price }}</p>
-                        <router-link to="/productDetail" type="button" class="card-overlay-button">{{ orderButtonText }}</router-link>
+                        <router-link :to="'/ProductDetail/' + product.id" type="button" class="card-overlay-button">{{ orderButtonText }}</router-link>
+                    <!--    <router-link to="/productDetail" type="button" class="card-overlay-button">{{ orderButtonText }}</router-link> -->
                     </div>
                     <img class="card-image" :src="product.image" :alt="product.title">
                 </div>
