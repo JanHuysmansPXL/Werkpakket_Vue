@@ -12,12 +12,8 @@
         components: {
             ProductCardComponent
         },
-        props: {
-          
-        },
-        mounted() {
-
-              },
+        props: {},
+        mounted() {},
         methods: {
 
     },

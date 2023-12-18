@@ -31,23 +31,10 @@ export default {
     <section class="gallery bg-darkest">
         <p class="txt-body_md">{{ galleryTitle }}<br></p>
         <h3 class="txt-title_sm">{{ gallerySubtitle }}</h3>
-
-        <!--
-        <div  v-for="item in productsStore" :key="item" class="cards-wrapper bg-black">
-            <div class="card">
-                <div class="card-overlay">
-                    <h1 class="card-overlay-heading">{{ this.productsStore.title }}</h1>
-                    <p class="card-overlay-paragraph">€299</p>
-                    <router-link to="/productDetail" type="button" class="card-overlay-button"> Order now</router-link>
-                </div>
-                <img class="card-image" src="/src/assets/images/gallery_3.png" alt="AuroPods - Nubis">
-            </div>
-        </div>
-        -->
     </section>
 
-<container>
-    <section class="gallery bg-darkest">
+<div>
+    <section class="gallery bg-darkest pt-xl">
         <div class="container-fluid cards-wrapper">
             <div  v-for="product in topProducts" :key="product.id" class="card">
                 <div class="">
@@ -62,21 +49,8 @@ export default {
             </div>
         </div>
     </section>
-</container>
-
- <!--  TEST TEST -> FILTER FRODUCTS
-    <div>
-        <h2>Top 4 Products by Stock</h2>
-        <ul>
-        <li v-for="product in topProducts" :key="product.id">
-            {{ product.title }} - Stock: {{ product.stock }}
-        </li>
-        </ul>
-        <p class="txt-body_md bg-darkest txt-light ms-lg" >Aantal Producten: {{ productsStore.productCount }}</p>
-    </div>
--->
+</div>
   
-
 </template>
 
     <!-- POPULAR PRODUCTS - CARD GALLERY 

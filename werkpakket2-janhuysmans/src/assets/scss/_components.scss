@@ -300,6 +300,25 @@
   }
 }
 
+.clear-cart-button {
+  width: 120px;
+  height: 36px;
+  font-family: $font-redhat-display;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $color-white;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s;
+}
+.clear-cart-button:hover {
+      background-color: $color-light;
+      color: $color-darkest;
+}
+
 /* CARD */
 .card {
   position: relative;
