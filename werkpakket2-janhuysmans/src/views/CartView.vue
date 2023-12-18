@@ -55,7 +55,7 @@ export default {
 
 <template>
 
-  <div class="bg-darkest container-fluid pt-xl mx-xxl">
+  <div class="bg-darkest container-fluid pt-xl pb-xl mx-xxl">
     <header>
       <h1 class="txt-heading_lg txt-black">{{ cartHeading }}</h1>
     </header>

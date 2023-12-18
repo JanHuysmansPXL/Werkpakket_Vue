@@ -12,7 +12,7 @@ export const useProductsStore = defineStore('products', {
     // Actions
     actions: {
         getProductById(productId) {
-        // Logica uit om het product op te halen op basis van het ID
+        // Logica uit om het product op te halen op basis van het ID --> NAkijken om voor Cart te gebruiken. + Quantity. 
         return this.products.find(product => product.id == productId);
         },
         getTopProducts() {

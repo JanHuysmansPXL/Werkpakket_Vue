@@ -21,7 +21,7 @@
       "id": 3,
       "title": "Auro Nova",
       "description": "Step into the future with Auro Nova True Wireless Stereo Earbuds. These earbuds seamlessly blend futuristic design with advanced audio technology, providing an immersive sonic journey.",
-      "image": "src/assets/images/case_3.png",
+      "image": "src/assets/images/case_4.png",
       "price": 179.99,
       "vatRate": 21,
       "stock": 100
@@ -30,7 +30,7 @@
       "id": 4,
       "title": "Auro Cosmos",
       "description": "Escape into a world of pure sound with Auro Cosmos Active Noise-Canceling EarPods. Immerse yourself in your favorite music without distractions, wherever you go.",
-      "image": "src/assets/images/case_4.png",
+      "image": "src/assets/images/case_1.png",
       "price": 249.99,
       "vatRate": 21,
       "stock": 60
@@ -84,7 +84,7 @@
       "id": 10,
       "title": "Auro Velis",
       "description": "Master the art of audio with Auro Echo Studio Monitor Earbuds. Precision-tuned for studio-quality sound, these earbuds redefine your perception of clarity and detail.",
-      "image": "src/assets/images/case_2.png",
+      "image": "src/assets/images/case_3.png",
       "price": 349.99,
       "vatRate": 21,
       "stock": 45
@@ -102,7 +102,7 @@
       "id": 12,
       "title": "Auro Zappa",
       "description": "Harmonize with deep bass and precision with Auro Bass Harmony Pro EarPods. Elevate your audio experience and feel the rhythm like never before.",
-      "image": "src/assets/images/case_2.png",
+      "image": "src/assets/images/case_3.png",
       "price": 319.99,
       "vatRate": 21,
       "stock": 55
@@ -111,7 +111,7 @@
       "id": 13,
       "title": "AuroTouch",
       "description": "Embark on an urban adventure with Auro Urban Voyager EarPods. Explore the city with style and immerse yourself in a world of dynamic audio.",
-      "image": "src/assets/images/case_2.png",
+      "image": "src/assets/images/case_4.png",
       "price": 599.99,
       "vatRate": 21,
       "stock": 85
@@ -120,7 +120,7 @@
       "id": 14,
       "title": "Auro",
       "description": "Find serenity in every note with Auro Tranquil Serenity Earbuds. Immerse yourself in a tranquil audio oasis that transports you to a realm of pure calmness.",
-      "image": "src/assets/images/case_2.png",
+      "image": "src/assets/images/case_1.png",
       "price": 269.99,
       "vatRate": 21,
       "stock": 50
@@ -129,54 +129,54 @@
       "id": 15,
       "title": "Auro Crystal Clear Sonic EarPods",
       "description": "Discover sonic clarity with Auro Crystal Clear Sonic EarPods. Dive into a world where every note sparkles with crystal-clear precision.",
-      "image": "src/assets/images/case_2.png",
+      "image": "src/assets/images/case_3.png",
       "price": 239.99,
       "vatRate": 21,
       "stock": 50
     },
-      {
-        "id": 16,
-        "name": "Auro Quantum Harmony EarPods",
-        "description": "Experience harmony in every note with Auro Quantum Harmony EarPods. Precision-tuned for a balanced and immersive audio experience.",
-        "image": "src/assets/images/case_2.png",
-        "price": 389.99,
-        "vatRate": 21,
-        "stock": 30
-      },
-      {
-        "id": 17,
-        "name": "Auro Nebula Pro Earbuds",
-        "description": "Embark on a journey through sound with Auro Nebula Pro Earbuds. Designed for audiophiles seeking unparalleled audio quality.",
-        "image": "src/assets/images/case_2.png",
-        "price": 429.99,
-        "vatRate": 21,
-        "stock": 20
-      },
-      {
-        "id": 18,
-        "name": "Auro Zenith",
-        "description": "Reach new heights of audio excellence with Auro Zenith Wireless EarPods. Elevate your listening experience to the Zenith of perfection.",
-        "image": "src/assets/images/case_2.png",
-        "price": 449.99,
-        "vatRate": 21,
-        "stock": 25
-      },
-      {
-        "id": 19,
-        "name": "AuroPack",
-        "description": "Unleash the divine sound with Auro Seraphim In-Ear Monitors. Immerse yourself in an audio experience that transcends ordinary boundaries.",
-        "image": "src/assets/images/case_2.png",
-        "price": 149.99,
-        "vatRate": 21,
-        "stock": 15
-      },
-      {
-        "id": 20,
-        "name": "AuroTag",
-        "description": "Ignite your senses with Auro Astral Glow EarPods. Immerse yourself in the mesmerizing glow of celestial audio brilliance.",
-        "image": "src/assets/images/case_2.png",
-        "price": 79.99,
-        "vatRate": 21,
-        "stock": 25
-      }
+    {
+      "id": 16,
+      "title": "Auro Quantum Harmony EarPods",
+      "description": "Experience harmony in every note with Auro Quantum Harmony EarPods. Precision-tuned for a balanced and immersive audio experience.",
+      "image": "src/assets/images/case_4.png",
+      "price": 389.99,
+      "vatRate": 21,
+      "stock": 30
+    },
+    {
+      "id": 17,
+      "title": "Auro Nebula Pro Earbuds",
+      "description": "Embark on a journey through sound with Auro Nebula Pro Earbuds. Designed for audiophiles seeking unparalleled audio quality.",
+      "image": "src/assets/images/pods_1.png",
+      "price": 429.99,
+      "vatRate": 21,
+      "stock": 20
+    },
+    {
+      "id": 18,
+      "title": "Auro Zenith",
+      "description": "Reach new heights of audio excellence with Auro Zenith Wireless EarPods. Elevate your listening experience to the Zenith of perfection.",
+      "image": "src/assets/images/pods_2.png",
+      "price": 449.99,
+      "vatRate": 21,
+      "stock": 25
+    },
+    {
+      "id": 19,
+      "title": "AuroPack",
+      "description": "Unleash the divine sound with Auro Seraphim In-Ear Monitors. Immerse yourself in an audio experience that transcends ordinary boundaries.",
+      "image": "src/assets/images/case_2.png",
+      "price": 149.99,
+      "vatRate": 21,
+      "stock": 15
+    },
+    {
+      "id": 20,
+      "title": "AuroTag",
+      "description": "Ignite your senses with Auro Astral Glow EarPods. Immerse yourself in the mesmerizing glow of celestial audio brilliance.",
+      "image": "src/assets/images/case_2.png",
+      "price": 79.99,
+      "vatRate": 21,
+      "stock": 25
+    }
     ]
