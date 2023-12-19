@@ -20,6 +20,7 @@ import { useCartStore } from '@/stores/cartStore.js';
         },
         methods: {
           logout() {
+          alert('Thanks for your visit. You \'ve logged out succesfully !');
           this.userStore.logout();
           // Bij logout terug naar home via router.
           this.$router.push('/');
@@ -33,17 +34,35 @@ import { useCartStore } from '@/stores/cartStore.js';
 </script>
 
 <template>
+  <nav class="navbar bg-darkest container-fluid">
+    <div class="navbar-brand"><router-link to="/" class="brand-link">{{ brandLink }}</router-link></div>
+    <div class="navbar-links">
+      <ul class="navbar-list">
+        <li class="navbar-listitem"><router-link to="/products" class="navbar-link">{{ linkProductsText }}</router-link></li>
+        <li class="navbar-listitem"><router-link to="/cart" class="navbar-link">{{ linkCartText }}<span class="cart-items-count"> ({{cartStore.cartItems.length}})</span></router-link></li>
+
+        <li class="navbar-listitem">
+          <router-link v-if="!userStore.isLoggedIn" to="/login" class="login-button"><i class="fas fa-user-circle"></i> {{ linkLoginText }}</router-link>
+          <button v-else @click="logout" class="login-button"><i class="fas fa-user-circle"></i> {{ linkLogoutText }}</button>
+        </li>        
+      </ul>
+    </div>
+  </nav>
+</template>
+
+<!--
+<template>
     <nav class="navbar bg-darkest container-fluid">
       <div class="navbar-brand"><router-link to="/" class="brand-link">{{ brandLink }}</router-link></div>
       <div class="navbar-links">
         <ul class="navbar-list">
           <li class="navbar-listitem"><router-link to="/products" class="navbar-link">{{ linkProductsText }}</router-link></li>
           <li class="navbar-listitem"><router-link to="/cart" class="navbar-link">{{ linkCartText }}<span class="cart-items-count"> ({{cartStore.cartItems.length}})</span></router-link></li>
-          <!-- Als NIET ingelogd -> Toon navbar met login-button -->
+          !-- Als NIET ingelogd -> Toon navbar met login-button --
           <li v-if="!userStore.isLoggedIn" class="navbar-listitem">
             <router-link to="/login" class="login-button"><i class="fas fa-user-circle"></i> {{ linkLoginText }}</router-link>
           </li>  
-          <!-- Anders -> Toon navbar met logout-button -->
+          !-- Anders -> Toon navbar met logout-button --
           <li v-else class="navbar-listitem">
             <router-link @click="logout" class="login-button"><i class="fas fa-user-circle"></i> {{ linkLogoutText }}</router-link>
           </li>        
@@ -51,5 +70,5 @@ import { useCartStore } from '@/stores/cartStore.js';
       </div>
     </nav>
   </template>
-  
+  -->
 
