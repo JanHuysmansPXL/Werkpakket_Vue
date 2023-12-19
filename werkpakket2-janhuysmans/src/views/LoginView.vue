@@ -6,14 +6,8 @@ import { useUserStore } from '@/stores/userStore.js';
     data() {
       return {
         
+        // Hier zitten de users in -> userStore.user
         userStore: useUserStore(),
-
-        // De testgebruiker: Deze gebruiken we om succesvol mee in te loggen.
-        testgebruiker: {
-          username: 'Test',
-          password: 'Test',
-          naam: 'Jan Huysmans',
-          },
         // Login Preset
         isUsernameValid: true,
         isPasswordValid: true,
@@ -30,21 +24,26 @@ import { useUserStore } from '@/stores/userStore.js';
       },
       methods: {
         submitForm() {
-        // Controleer of de ingevoerde gegevens overeenkomen met de testgebruiker
-        if (
-          this.usernameInput == this.testgebruiker.username &&
-          this.passwordLabel == this.testgebruiker.password  // Fix the typo here
-        ) {
-          // Gebruiker succesvol ingelogd
-          console.log('Gebruiker ingelogd');
-          this.userStore.login(this.testgebruiker); // Gebruiker inloggen en gegevens opslaan
-          console.log(this.userStore.isLoggedIn.value); // Accessing the value of isLoggedIn
-          this.$router.push('/cart'); // Navigeer naar het winkelmandje
-        } else {
-          // Foutmelding weergeven
-          console.error('Ongeldige inloggegevens');
-        }
-      },
+      // Check login status using userStore
+          let foundUser = null;
+          foundUser = this.userStore.users.find(
+            (user) => user.username == this.usernameInput && user.password === this.passwordInput
+          );
+
+          if (foundUser) {
+            console.log('User logged in:', foundUser.name);
+            this.userStore.login(foundUser);
+            console.log(this.userStore.isLoggedIn);
+            this.$router.push('/cart');
+          } else {
+            console.error('Invalid login credentials');
+            alert('The data you entered was incorrect. Please try again.');
+          }
+        },
+      logout() {
+          this.userStore.logout(); // Bij logout naar home.
+          this.$router.push('/');
+        },
       },
       computed: {
         addWelcome() {
@@ -85,14 +84,13 @@ import { useUserStore } from '@/stores/userStore.js';
     <input v-model="usernameInput" class="login-input_txt" type="text" placeholder="Username" id="username" required>
     
     <label class="login-label" for="password">{{ passwordLabel }}</label>
-    <input v-model="passwordLabel" class="login-input_txt" type="password" placeholder="Password" id="password" required>
+    <input v-model="passwordInput" class="login-input_txt" type="password" placeholder="Password" id="password" required>
 
-    <button type="submit" class="button form-button" v-on:submit.prevent="submitForm()" >{{ formButtonText}}</button>
+    <button type="submit" class="button form-button" v-on:submit="submitForm()" >{{ formButtonText}}</button>
 
-    <!-- Voeg de mogelijkheid om uit te loggen toe: -->
+    <!-- Forgot Password OF Uitloggen. -->
     <a v-if="userStore.isLoggedIn" @click="logout" class="form-link">Log uit</a>
-
-    <a class="form-link" href="#"> {{ forgotPasswordText }}</a>
+    <a v-if="userStore.isLoggedOut" class="form-link" href="#"> {{ forgotPasswordText }}</a>
   </form>
 </div>
 
