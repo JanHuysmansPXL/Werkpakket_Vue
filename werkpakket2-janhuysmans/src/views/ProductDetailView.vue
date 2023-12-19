@@ -44,6 +44,11 @@ export default {
         console.error('Product not found');
       }
     },
+    addToCart() {
+      // Selecteer deze cart (= inhoud cartStore) en voeg dit product toe aan de Cart.
+    this.cart.addToCart(this.product);
+      // Notificatie ?
+    },
   },
   created() {
     console.log('Component created');
@@ -124,7 +129,7 @@ export default {
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
       </p>
-      <a href="#" class="cart-button mt-lg">Add to cart</a>
+      <a href="#" class="cart-button mt-lg" @click="addToCart">{{ cartButtonText }}</a>
     </div>
   </div>
 

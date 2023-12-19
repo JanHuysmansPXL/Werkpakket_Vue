@@ -1,6 +1,6 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import CartComponent from '../components/CartComponent.vue';
+import CartComponent from '@/components/CartComponent.vue';
 import { useProductsStore } from '@/stores/productsStore.js';
 import { useCartStore } from '@/stores/cartStore.js';
 
@@ -15,7 +15,7 @@ export default {
       cartHeading: 'Cart',
       detailButtonText: 'details',
       productsStore: useProductsStore(),
-      cartStore: useCartStore(),
+      cart: useCartStore(),
     };
   },
 
@@ -25,29 +25,29 @@ export default {
     },
 
     cartItems() {
-      return this.cartStore.cartItems;
+      return this.cart.cartItems;
     },
 
     totalAmount() {
-      return this.cartStore.totalAmount;
+      return this.cart.totalAmount;
     },
   },
 
   methods: {
     addToCart(product) {
-      this.cartStore.addToCart(product);
+      this.cart.addToCart(product);
     },
 
     removeFromCart(productId) {
-      this.cartStore.removeFromCart(productId);
+      this.cart.removeFromCart(productId);
     },
 
     updateQuantity(productId, newQuantity) {
-      this.cartStore.updateQuantity(productId, newQuantity);
+      this.cart.updateQuantity(productId, newQuantity);
     },
 
     clearCart() {
-      this.cartStore.clearCart();
+      this.cart.clearCart();
     },
   },
 };
