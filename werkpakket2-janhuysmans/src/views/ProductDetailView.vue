@@ -14,6 +14,7 @@ export default {
 
       // Products Data
       productsStore: null,
+      quantity: 1,
       product: {
         id: 0,
         title: '',
@@ -45,10 +46,22 @@ export default {
       }
     },
     addToCart() {
-      // Selecteer deze cart (= inhoud cartStore) en voeg dit product toe aan de Cart.
-    this.cart.addToCart(this.product);
-      // Notificatie ?
+      console.log('Selected Quantity:', this.quantity);
+      // Selecteer deze cart (= inhoud cartStore) en voeg dit product met de hoeveelheid toe aan de Cart.
+      this.cart.addToCart({ ...this.product, quantity: this.quantity });      // Notificatie ?
     },
+    incrementQuantity() {
+            // Hoeveelheid bijtellen +1 bij artikel, als er voldoende stock is.
+            if (this.quantity < this.product.stock) {
+                this.quantity++;
+            }
+        },
+    decrementQuantity() {
+            // Hoeveelheid aftrekken -1 bij artikel, zolang er stock is.
+            if (this.quantity > 1) {
+                this.quantity--;
+            }
+        },
   },
   created() {
     console.log('Component created');
@@ -129,7 +142,15 @@ export default {
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
       </p>
-      <a href="#" class="cart-button mt-lg" @click="addToCart">{{ cartButtonText }}</a>
+      
+      <!-- Quantity input with plus and minus buttons -->
+      <div class="quantity-input mt-lg">
+          <button class="increment-button" @click="decrementQuantity" :disabled="quantity === 1">-</button>
+          <input class="increment-number" v-model.number="quantity" type="number" id="quantity" min="1" required>
+          <button class="increment-button" @click="incrementQuantity">+</button>
+      </div>
+
+      <a href="#" class="cart-button mt-sm" @click="addToCart">{{ cartButtonText }}</a>
     </div>
   </div>
 
@@ -165,7 +186,38 @@ export default {
 </template>
 
 <style>
-
+.increment-button {
+  margin: 0 0 0 .5rem;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 1px;
+  height: 2rem;
+  width: 2rem;
+  background-color: #0a0a0a;
+  color: white;
+}
+.increment-button:first-of-type {
+  margin: 0;
+}
+.increment-button:hover {
+  background-color: rgb(243, 243, 243);
+    font-weight: 500;
+    border: none;
+    color: #0a0a0a;
+}
+.increment-number {
+  text-align: center;
+  margin: 0 0 0 .5rem;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 1px;
+  height: 2rem;
+  width: 2rem;
+  background-color: #0a0a0a;
+  color: white;
+}
+.increment-number:hover {
+  background-color: rgb(243, 243, 243);
+    font-weight: 500;
+    border: none;
+}
 
 </style>
-

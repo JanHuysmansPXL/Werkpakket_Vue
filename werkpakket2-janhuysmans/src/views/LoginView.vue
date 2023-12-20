@@ -83,7 +83,7 @@ import { useUserStore } from '@/stores/userStore.js';
     <label class="login-label" for="username">{{ usernameLabel }}</label>
     <input v-model="usernameInput" class="login-input_txt" type="text" placeholder="Username" id="username" required>
     
-    <label class="login-label" for="password">{{ passwordLabel }}</label>
+    <label c for="password">{{ passwordLabel }}</label>
     <input v-model="passwordInput" class="login-input_txt" type="password" placeholder="Password" id="password" required>
 
     <button type="submit" class="button form-button" v-on:submit="submitForm()" >{{ formButtonText}}</button>

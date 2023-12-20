@@ -65,7 +65,6 @@ import { useCartStore } from '@/stores/cartStore.js';
                 <p class="txt-body_md">Price: €{{ item.price * item.quantity }}</p>
                 </div>
                 <div>                
-<!-- Inside your template -->
                     <button class="quantitybutton" @click="updateQuantity(item.id, item.quantity - 1, true)">-</button>
                     <button class="quantitybutton" @click="updateQuantity(item.id, item.quantity + 1)">+</button>
                     <button class="remove-item-button" @click="removeFromCart(item.id)">{{ removeButtonText }}</button></div>
@@ -86,14 +85,12 @@ import { useCartStore } from '@/stores/cartStore.js';
     padding: 1rem;
     border-radius: 2px;
 }
-
 .cart-wrap {
  display: flex;
  justify-content: space-between;
  align-items: center;
 }
 .quantitybutton {
-    font-family: $font-redhat-display;
     font-size: .8rem;
     margin: 0 0 0 .5rem;
     border: 1px solid rgb(243, 243, 243);
@@ -110,7 +107,6 @@ import { useCartStore } from '@/stores/cartStore.js';
     color: #0a0a0a;
 }
 .remove-item-button {
-    font-family: $font-redhat-display;
     font-size: .8rem;
     text-transform: uppercase;
     margin: 0 0 0 .5rem;

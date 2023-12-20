@@ -34,10 +34,10 @@ export default {
   },
 
   methods: {
-    addToCart(product) {
-      this.cart.addToCart(product);
+    addToCart() {
+    console.log('Adding to Cart:', this.product, this.quantity);
+    this.cart.addToCart({ ...this.product, quantity: this.quantity });
     },
-
     removeFromCart(productId) {
       this.cart.removeFromCart(productId);
     },

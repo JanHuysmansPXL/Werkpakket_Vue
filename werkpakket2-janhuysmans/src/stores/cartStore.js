@@ -20,7 +20,7 @@ export const useCartStore = defineStore('cart', {
 
       if (existingItem) {
         // Als het product al in het winkelmandje zit, verhoog de hoeveelheid
-        existingItem.quantity++;
+        existingItem.quantity += product.quantity;
       } else {
         // Voeg een nieuw item toe aan het winkelmandje
         this.cartItems.push({ ...product, quantity: 1 });
