@@ -24,7 +24,7 @@ import { useCartStore } from '@/stores/cartStore.js';
             },
 
             cartItems() {
-            return this.cartStore.cartItems;
+                return this.cartStore.cartItems;
             },
 
             totalAmount() {
@@ -61,8 +61,10 @@ import { useCartStore } from '@/stores/cartStore.js';
             },
         },
             methods: {
-            addToCart(product) {
-            this.cartStore.addToCart(product);
+                addToCart(product) {
+            console.log('Selected Quantity:', this.quantity);
+            // Selecteer deze cart (= inhoud cartStore) en voeg dit product met de hoeveelheid toe aan de Cart.
+            this.cart.addToCart({ ...product, quantity: this.quantity });
             },
             removeFromCart(productId) {
             this.cartStore.removeFromCart(productId);

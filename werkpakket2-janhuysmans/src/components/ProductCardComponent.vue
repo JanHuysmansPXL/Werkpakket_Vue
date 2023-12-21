@@ -1,12 +1,9 @@
 <script>
-  import productList from '@/assets/products.json'
   import { useProductsStore } from '@/stores/productsStore.js';
-
 
     export default {
         data() {
             return {
-                products: productList,
                 productsStore: useProductsStore(),
                 orderButtonText: "Order now",
             }

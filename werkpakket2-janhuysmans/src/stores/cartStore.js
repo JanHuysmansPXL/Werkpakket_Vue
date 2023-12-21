@@ -5,26 +5,17 @@ export const useCartStore = defineStore('cart', {
   state: () => ({
     cartItems: [],
   }),
-
   getters: {
     // Getter om de totale prijs van items in het winkelmandje te berekenen
     totalAmount() {
-      return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+      return this.cartItems.reduce((total, item) => total + item.price * item.quantity * (1 + item.vatRate / 100), 0);
     },
   },
-
   actions: {
     // Actie om een product aan het winkelmandje toe te voegen
-    addToCart(product) {
-      const existingItem = this.cartItems.find(item => item.id === product.id);
-
-      if (existingItem) {
-        // Als het product al in het winkelmandje zit, verhoog de hoeveelheid
-        existingItem.quantity += product.quantity;
-      } else {
-        // Voeg een nieuw item toe aan het winkelmandje
-        this.cartItems.push({ ...product, quantity: 1 });
-      }
+    addToCart(item) {
+      // You might want to check if the item is already in the cart and update quantity
+      this.cartItems.push(item);
     },
 
     // Actie om een product uit het winkelmandje te verwijderen

@@ -55,7 +55,7 @@ const router = createRouter({
         },
         { 
             path: '/success', 
-            component: ConfirmationView  
+            component: ConfirmationView,
         },
         { 
         path: '/:notFound(.*)', 

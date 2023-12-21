@@ -1,6 +1,4 @@
 <script>
-    import HeaderComponent from '@/components/HeaderComponent.vue';
-    import FooterComponent from '@/components/FooterComponent.vue';
     import { useCartStore } from '@/stores/cartStore.js';
   export default {
     data() {
@@ -8,15 +6,18 @@
       cart: useCartStore(),
       customerName: '',
       customerAddress: '',
-      customerEmail: '',
+      customerCity: '',
       nameLabel: 'Naam: ',
       addressLabel: 'Address: ',
-      emailLabel: 'E-mail: ',
+      cityLabel: 'City: ',
       linkProductsText: 'Go To Products',
       emptyCartText: 'Shoot, your cart is empty',
       orderButtonText: 'Confirm order',
     };
   },
+  created() {
+  console.log('Cart Items in Checkout Page:', this.cart.cartItems);
+},
   computed: {
     cartItems() {
       return this.cart.cartItems;
@@ -31,14 +32,16 @@
     },
     placeOrder() {
       this.cart.clearCart();
-      this.$router.push('/success');
+      this.$router.push({ path: '/success', params: { cartItems: this.cart.cartItems } });
     },
+  },
+  components: {
+
   },
 }
 </script>
 
 <template>
-
 <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!-- Link voor Google Fonts - RED HAT DISPLAY -->
@@ -47,21 +50,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>     
 
-<HeaderComponent/>
-
-<div class="container-fluid h-80 bg-darkest pt-xl pb-xl">
+  <div class="container-fluid h-80 bg-darkest pt-xl pb-xl">
     <h2 class="txt-heading_md">Bestelling afronden</h2>
-    <div v-if="cartItems.length > 0">
+  <div v-if="cartItems.length > 0">
       <!-- Display a summary of items in the cart -->
-      <div v-for="item in cartItems" :key="item.id" class="checkout-item">
-        <p class="txt-body_md">{{ item.title }} - {{ item.quantity }} stuks</p>
-        <p class="txt-body_md">Totaal: €{{ itemTotal(item) }}</p>
-      </div>
+  <div v-for="item in cartItems" :key="item.id" class="checkout-item">
+    <p class="txt-body_md">{{ item.title }} - {{ item.quantity }} stuks</p>
+    <p class="txt-body_md">Totaal: €{{ itemTotal(item) }}</p>
+  </div>
 
-      <!-- Display total amount -->
-      <div class="checkout-total">
-        <p class="txt-body_md">Totaalbedrag: €{{ totalAmount }}</p>
-      </div>
+    <!-- Display total amount -->
+  <div class="checkout-total">
+    <p class="txt-body_md">Totaalbedrag: €{{ totalAmount }}</p>
+  </div>
 
       <!-- Checkout form -->
       <form class="checkout-form" @submit.prevent="placeOrder">
@@ -72,8 +73,8 @@
         <label class="checkout-label" for="address">{{ addressLabel }}</label>
         <input type="text" id="address" v-model="customerAddress" required>
 
-        <label class="checkout-label" for="email">{{ emailLabel }}</label>
-        <input type="email" id="email" v-model="customerEmail" required>
+        <label class="checkout-label" for="email">{{ cityLabel }}</label>
+        <input type="text" id="city" v-model="customerCity" required>
 
         <button class="confirm-order-button" type="submit">Bestelling plaatsen</button>
       </form>
@@ -85,7 +86,6 @@
     </div>  
   </div>
 
-<FooterComponent/>
 
 </template>
 
