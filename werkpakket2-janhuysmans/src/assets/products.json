@@ -7,7 +7,8 @@
       "price": 199.99,
       "vatRate": 21,
       "stock": 90,
-      "rating": 5
+      "rating": 5,
+      "category": "AuroPods"
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@
       "price": 219.99,
       "vatRate": 21,
       "stock": 75,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 3,
@@ -27,7 +29,8 @@
       "price": 179.99,
       "vatRate": 21,
       "stock": 100,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 4,
@@ -37,7 +40,8 @@
       "price": 249.99,
       "vatRate": 21,
       "stock": 60,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 5,
@@ -47,7 +51,8 @@
       "price": 299.99,
       "vatRate": 21,
       "stock": 90,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 6,
@@ -56,7 +61,8 @@
       "image": "src/assets/images/pods_2.png",
       "price": 269.99,
       "vatRate": 21,
-      "stock": 70
+      "stock": 70,
+      "category": "AuroPods"
     },
     {
       "id": 7,
@@ -66,7 +72,8 @@
       "price": 449.99,
       "vatRate": 21,
       "stock": 30,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 8,
@@ -76,7 +83,8 @@
       "price": 399.99,
       "vatRate": 21,
       "stock": 40,
-      "rating": 5
+      "rating": 5,
+      "category": "AuroPods"
     },
     {
       "id": 9,
@@ -86,7 +94,8 @@
       "price": 229.99,
       "vatRate": 21,
       "stock": 80,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 10,
@@ -96,7 +105,8 @@
       "price": 349.99,
       "vatRate": 21,
       "stock": 45,
-      "rating": 5
+      "rating": 5,
+      "category": "AuroPods"
     },
     {
       "id": 11,
@@ -105,7 +115,8 @@
       "image": "src/assets/images/case_2.png",
       "price": 199.99,
       "vatRate": 21,
-      "stock": 65
+      "stock": 65,
+      "category": "AuroPods"
     },
     {
       "id": 12,
@@ -115,7 +126,8 @@
       "price": 319.99,
       "vatRate": 21,
       "stock": 55,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 13,
@@ -125,7 +137,8 @@
       "price": 599.99,
       "vatRate": 21,
       "stock": 85,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroTouch"
     },
     {
       "id": 14,
@@ -135,7 +148,8 @@
       "price": 269.99,
       "vatRate": 21,
       "stock": 50,
-      "rating": 5
+      "rating": 5,
+      "category": "AuroTouch"
     },
     {
       "id": 15,
@@ -145,7 +159,8 @@
       "price": 239.99,
       "vatRate": 21,
       "stock": 50,
-      "rating": 3
+      "rating": 3,
+      "category": "AuroPods"
     },
     {
       "id": 16,
@@ -155,8 +170,8 @@
       "price": 389.99,
       "vatRate": 21,
       "stock": 30,
-      "rating": 5
-
+      "rating": 5,
+      "category": "AuroPods"
     },
     {
       "id": 17,
@@ -166,7 +181,8 @@
       "price": 429.99,
       "vatRate": 21,
       "stock": 20,
-      "rating": 3
+      "rating": 3,
+      "category": "AuroPods"
     },
     {
       "id": 18,
@@ -176,7 +192,8 @@
       "price": 449.99,
       "vatRate": 21,
       "stock": 25,
-      "rating": 5
+      "rating": 5,
+      "category": "AuroPods"
     },
     {
       "id": 19,
@@ -186,7 +203,8 @@
       "price": 149.99,
       "vatRate": 21,
       "stock": 15,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     },
     {
       "id": 20,
@@ -196,6 +214,7 @@
       "price": 79.99,
       "vatRate": 21,
       "stock": 25,
-      "rating": 4
+      "rating": 4,
+      "category": "AuroPods"
     }
     ]

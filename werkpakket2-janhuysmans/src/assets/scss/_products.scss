@@ -31,7 +31,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-
     .filter-listitem {
       font-family: $font-redhat-display;
       font-size: $fs-sm;
@@ -48,6 +47,30 @@
     }
   }
 }
+
+
+
+.filter-list li {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 400;
+  margin-bottom: $margin-md;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}
+.filter-toggle {
+  color: white;
+}
+.filter-active {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 400;
+  margin-bottom: $margin-lg;
+  list-style-type: none;
+  color: red;
+}
+
 
 // Productkaarten
 

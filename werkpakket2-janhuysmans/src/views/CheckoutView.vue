@@ -35,9 +35,6 @@
       this.$router.push({ path: '/success', params: { cartItems: this.cart.cartItems } });
     },
   },
-  components: {
-
-  },
 }
 </script>
 
