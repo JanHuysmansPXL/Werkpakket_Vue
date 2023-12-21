@@ -23,6 +23,7 @@ export default {
         price: 0,
         vatRate: 0,
         stock: 0,
+        rating: 0
       },
     }
   },
@@ -136,11 +137,7 @@ export default {
         <p class="infotxt_lg mt-md mb-md">{{ '€ ' + product.price }}</p>
         <p class="infotxt_sm"><span class="infotxt_strong">Stock:</span> {{ product.stock }}</p>
         <p class="infotxt_sm"><span class="infotxt_strong">Ratings:</span>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
+        <i class="fas fa-star" v-for="star in product.rating"></i>
       </p>
       
       <!-- Quantity input with plus and minus buttons -->
@@ -215,7 +212,8 @@ export default {
   color: white;
 }
 .increment-number:hover {
-  background-color: rgb(243, 243, 243);
+  text-align: center;
+  background-color: rgb(50, 50, 50);
     font-weight: 500;
     border: none;
 }
