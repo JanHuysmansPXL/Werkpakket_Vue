@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="infotxt_sm"><span class="infotxt_strong">Stock:</span> {{ product.stock }}</p>
         <p class="infotxt_sm"><span class="infotxt_strong">Ratings:</span>
         <i class="fas fa-star" v-for="star in product.rating"></i>
+        <p class="info-subheading description mt-md">{{ product.description }}</p>
       </p>
       
       <!-- Quantity input with plus and minus buttons -->
@@ -210,6 +211,9 @@ document.addEventListener("DOMContentLoaded", function () {
   background-color: rgb(50, 50, 50);
     font-weight: 500;
     border: none;
+}
+.description {
+  max-width: 35rem;
 }
 
 </style>
