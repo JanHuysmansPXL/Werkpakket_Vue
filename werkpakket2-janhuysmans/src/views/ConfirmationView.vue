@@ -1,16 +1,17 @@
 <script>
 import { useCartStore } from "@/stores/cartStore.js";
+import { useUserStore } from "@/stores/userStore.js";
 
 export default {
   created() {
-  // Assuming 'useCartStore' is how you access the cart store in your confirmation page
   this.cart = useCartStore();
-  // Log the cart items to check if they are correctly initialized
   console.log('Cart Items in Confirmation Page:', this.cart.cartItems);
   },
   data() {
     return {
+      user: useUserStore(),
       cart: useCartStore(),
+      headingText: 'Order Confirmation',
       customerName: "", 
       customerAddress: "",
       customerCity: "",
@@ -19,6 +20,7 @@ export default {
       cityLabel: "City: ",
       emptyCartText: "Shoot, your cart got lost. Fixing it now.",
       linkProductsText: "Products",
+      thankYou: 'Thank you for your order! Your transaction was completed successfully.',
     };
   },
   computed: {
@@ -26,7 +28,7 @@ export default {
       return this.cart.cartItems;
     },
     totalAmount() {
-      return this.cart.totalAmount;
+      return this.cart.totalAmount.toFixed(2);
     },
   },
   methods: {
@@ -52,9 +54,9 @@ export default {
 
   <div>
     <div class="container-fluid h-80 bg-darkest pt-xl pb-xl">
-      <h2 class="txt-heading_md">Order Confirmation</h2>
+      <h2 class="txt-heading_md mb-sm">{{headingText}}</h2>
 
-      <div v-if="cartItems.length > 0">
+      <div v-if="cartItems">
         <!-- Display a summary of items in the cart -->
         <div v-for="item in cartItems" :key="item.id" class="confirmation-item">
           <p class="txt-body_md">{{ item.title }} - {{ item.quantity }} pc</p>
@@ -63,19 +65,18 @@ export default {
 
         <!-- Bedrag -->
         <div class="confirmation-total">
-          <p class="txt-body_md">Total Amount: €{{ totalAmount }}</p>
-          <p class="txt-body_md">Total Amount: €{{ totalAmount }}</p>
+          <p class="txt-body_md">Total Amount: €{{ cart.totalAmount }}</p>
         </div>
 
-        <!-- Klantgegevens -->
-        <div class="customer-details">
+        <!-- Klantgegevens -- AANVULLEN -->
+        <div class="customer-details pt-md">
           <p class="txt-body_md">{{ nameLabel }} {{ customerName }}</p>
           <p class="txt-body_md">{{ addressLabel }} {{ customerAddress }}</p>
           <p class="txt-body_md">{{ cityLabel }} {{ customerCity }}</p>
         </div>
 
         <!-- Bevestiging -->
-        <p class="txt-body_md">Thank you for your order! Your transaction was completed successfully.</p>
+        <p class="txt-body_md pt-md">{{ thankYou }}</p>
 
       </div>
       <div v-else>
@@ -103,5 +104,6 @@ export default {
 }
 .customer-details {
   margin-top: 1rem;
+  font-style: italic;
 }
 </style>

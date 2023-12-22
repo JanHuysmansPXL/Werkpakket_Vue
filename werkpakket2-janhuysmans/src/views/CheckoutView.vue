@@ -1,11 +1,11 @@
 <script>
     import { useCartStore } from '@/stores/cartStore.js';
-    import { useUserStore } from '@/stores/userStore.js';
 
   export default {
     data() {
     return {
       cart: useCartStore(),
+      headingText: 'Bestelling afronden',
       customerName: '',
       customerAddress: '',
       customerCity: '',
@@ -14,12 +14,12 @@
       cityLabel: 'City: ',
       linkProductsText: 'Go To Products',
       emptyCartText: 'Shoot, your cart is empty',
-      orderButtonText: 'Confirm order',
+      orderButtonText: 'Confirm your order',
     };
   },
   created() {
   console.log('Cart Items in Checkout Page:', this.cart.cartItems);
-},
+  },
   computed: {
     cartItems() {
       return this.cart.cartItems;
@@ -27,13 +27,15 @@
     totalAmount() {
       return this.cart.totalAmount;
     },
+    totalAmountWithoutTax() {
+      return this.cart.totalAmountWithoutTax;
+    },
   },
   methods: {
     itemTotal(item) {
       return ((item.price * item.quantity) + (item.price * item.quantity * (item.vatRate / 100))).toFixed(2);
     },
     placeOrder() {
-      this.cart.clearCart();
       this.$router.push({ name: 'Success' , params: { cartItems: this.cart.cartItems } });
     },
   },
@@ -50,17 +52,18 @@
 </head>     
 
   <div class="container-fluid h-80 bg-darkest pt-xl pb-xl">
-    <h2 class="txt-heading_md">Bestelling afronden</h2>
+    <h2 class="txt-heading_md">{{headingText}}</h2>
   <div v-if="cartItems.length > 0">
       <!-- Display a summary of items in the cart -->
   <div v-for="item in cartItems" :key="item.id" class="checkout-item">
-    <p class="txt-body_md">{{ item.title }} - {{ item.quantity }} stuks</p>
-    <p class="txt-body_md">Totaal: €{{ itemTotal(item) }}</p>
+    <p class="txt-body_md">{{ item.title }} - {{ item.quantity }}pc.</p>
+    <p class="txt-body_md">Price: € {{ itemTotal(item) }}</p>
   </div>
 
     <!-- Display total amount -->
   <div class="checkout-total">
-    <p class="txt-body_md">Totaalbedrag: €{{ totalAmount }}</p>
+    <p class="txt-body_md">Total ex. VAT: € {{ totalAmountWithoutTax.toFixed(2) }}</p>
+    <p class="txt-body_md">Total Incl. VAT: € {{ totalAmount.toFixed(2) }}</p>
   </div>
 
       <!-- Checkout form -->
@@ -75,7 +78,7 @@
         <label class="checkout-label" for="email">{{ cityLabel }}</label>
         <input type="text" id="city" v-model="customerCity" required>
 
-        <button class="confirm-order-button" type="submit">Bestelling plaatsen</button>
+        <button class="confirm-order-button" type="submit">{{orderButtonText}}</button>
       </form>
     </div>
     <div v-else>

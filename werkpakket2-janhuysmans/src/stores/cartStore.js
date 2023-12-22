@@ -10,6 +10,9 @@ export const useCartStore = defineStore('cart', {
     totalAmount() {
       return this.cartItems.reduce((total, item) => total + item.price * item.quantity * (1 + item.vatRate / 100), 0);
     },
+    totalAmountWithoutTax() {
+      return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    },
   },
   actions: {
     // Actie om een product aan het winkelmandje toe te voegen
@@ -31,7 +34,6 @@ export const useCartStore = defineStore('cart', {
         itemToUpdate.quantity = newQuantity;
       }
     },
-
     // Actie om het hele winkelmandje leeg te maken
     clearCart() {
       this.cartItems = [];

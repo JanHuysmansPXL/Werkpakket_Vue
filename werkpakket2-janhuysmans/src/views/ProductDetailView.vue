@@ -2,6 +2,7 @@
 import { useProductsStore } from '@/stores/productsStore.js';
 import { useCartStore } from '@/stores/cartStore.js';
 
+  // VANAF HIER DATA ETC !!!
 export default {
   data() {
     return {
@@ -11,8 +12,7 @@ export default {
 
       cartButtonText: 'Add to cart',
       cart: useCartStore(),
-
-      // Products Data
+      // Products
       productsStore: null,
       quantity: 1,
       product: {
@@ -23,7 +23,9 @@ export default {
         price: 0,
         vatRate: 0,
         stock: 0,
-        rating: 0
+        rating: 0,
+        category: '',
+        specs: []
       },
     }
   },
@@ -70,8 +72,10 @@ export default {
   },
 }
 
-    //SCRIPT TE VERWERKEN NAAR VUE - DIENT VOOR DE OVERLAY VAN DE PRODUCT-IMAGE
-    document.addEventListener("DOMContentLoaded", function () {
+// DIT SCRIPT TE VERWERKEN NAAR VUE @click
+// DIENT VOOR DE OVERLAY VAN DE PRODUCT-IMAGE
+// SORRY ROBIN BEN ER NIET TIJDIG TOE GEKOMEN.. :)
+document.addEventListener("DOMContentLoaded", function () {
     const toggleOverlay = document.querySelector(".toggle-overlay");
     const imageOverlay = document.querySelector(".image-overlay");
     const closeOverlay = document.querySelector(".close-overlay");
@@ -157,24 +161,14 @@ export default {
     <div class="specs-left">
       <p class="infotxt_lg mt-sm mb-md"><span class="infotxt_strong">Technical Specs:</span></p>
       <ul class="product-info-list">
-        <li class="infotxt_sm"><i class="fas fa-stream"></i>Bone conduction</li>
-        <li class="infotxt_sm"><i class="fab fa-bluetooth-b"></i> Bluetooth 5.0</li>
-        <li class="infotxt_sm"><i class="fas fa-battery-full"></i>Battery Life: 24h</li>
-        <li class="infotxt_sm"><i class="fas fa-volume-up"></i>Active Noise Cancelling</li>
-        <li class="infotxt_sm"><i class="fas fa-mobile-alt"></i>Compatibility: Smartphone, tablet, laptop</li>
-        <li class="infotxt_sm"><i class="fas fa-comment-dots"></i>Supported: Siri, Google Assistant, Alexa</li>
+        <li v-for="spec in product.specs" :key="spec.text" class="infotxt_sm">
+          <i :class="spec.icon"></i> {{ spec.text }}
+        </li>
       </ul>
     </div>
     <div class="specs-right">
-      <p class="infotxt_lg mt-sm mb-md"><span class="infotxt_strong">Technical Specs:</span></p>
-      <ul class="product-info-list">
-        <li class="infotxt_sm"><i class="fas fa-stream"></i>Bone conduction</li>
-        <li class="infotxt_sm"><i class="fab fa-bluetooth-b"></i> Bluetooth 5.0</li>
-        <li class="infotxt_sm"><i class="fas fa-battery-full"></i>Battery Life: 24h</li>
-        <li class="infotxt_sm"><i class="fas fa-volume-up"></i>Active Noise Cancelling</li>
-        <li class="infotxt_sm"><i class="fas fa-mobile-alt"></i>Compatibility: Smartphone, tablet, laptop</li>
-        <li class="infotxt_sm"><i class="fas fa-comment-dots"></i>Supported: Siri, Google Assistant, Alexa</li>
-      </ul>
+      <p class="infotxt_lg mt-sm mb-md"><span class="infotxt_strong"></span></p>
+      <!-- KEEP EMPTY FOR NOW-->
     </div>
   </div>
   <div class="line mt-lg"></div>

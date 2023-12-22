@@ -41,7 +41,7 @@ const router = createRouter({
         },
         { 
             path: '/products', 
-            name: '/products',
+            name: 'products',
             component: ProductsView  
         },
         { 
@@ -54,13 +54,14 @@ const router = createRouter({
         },
         { 
             path: '/login', 
-            name: '/login',
+            name: 'login',
             component: LoginView  
         },
         { 
             path: '/success', 
-            name: '/Success', 
+            name: 'Success', 
             component: ConfirmationView,
+            props: true
         },
         { 
         path: '/:notFound(.*)', 
