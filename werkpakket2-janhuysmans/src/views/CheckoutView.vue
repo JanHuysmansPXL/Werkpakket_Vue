@@ -1,5 +1,7 @@
 <script>
     import { useCartStore } from '@/stores/cartStore.js';
+    import { useUserStore } from '@/stores/userStore.js';
+
   export default {
     data() {
     return {
@@ -32,7 +34,7 @@
     },
     placeOrder() {
       this.cart.clearCart();
-      this.$router.push({ path: '/success', params: { cartItems: this.cart.cartItems } });
+      this.$router.push({ name: 'Success' , params: { cartItems: this.cart.cartItems } });
     },
   },
 }

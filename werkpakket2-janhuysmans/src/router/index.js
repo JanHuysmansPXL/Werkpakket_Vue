@@ -26,19 +26,22 @@ const router = createRouter({
         },
         { 
             // path / -> hetgeen achter de url komt (enkel slash omdat deze kan wijzigen afh. van omgeving)
-                path: '/',
-                redirect:'/home',
+        path: '/',
+        redirect:'/home',
             },
         { 
-            path: '/cart', 
+            path: '/cart',
+            name: 'cart', 
             component: CartView  
         },
         { 
             path: '/checkout', 
-            component: CheckoutView   
+            name: 'checkout',
+            component: CheckoutView,
         },
         { 
             path: '/products', 
+            name: '/products',
             component: ProductsView  
         },
         { 
@@ -51,10 +54,12 @@ const router = createRouter({
         },
         { 
             path: '/login', 
+            name: '/login',
             component: LoginView  
         },
         { 
             path: '/success', 
+            name: '/Success', 
             component: ConfirmationView,
         },
         { 

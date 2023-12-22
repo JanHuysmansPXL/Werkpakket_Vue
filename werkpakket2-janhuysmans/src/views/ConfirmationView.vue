@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       cart: useCartStore(),
-      customerName: "", // Get customer details from checkout form or user profile
+      customerName: "", 
       customerAddress: "",
       customerCity: "",
       nameLabel: "Name: ",
@@ -57,23 +57,24 @@ export default {
       <div v-if="cartItems.length > 0">
         <!-- Display a summary of items in the cart -->
         <div v-for="item in cartItems" :key="item.id" class="confirmation-item">
-          <p class="txt-body_md">{{ item.title }} - {{ item.quantity }} units</p>
+          <p class="txt-body_md">{{ item.title }} - {{ item.quantity }} pc</p>
           <p class="txt-body_md">Total: €{{ itemTotal(item) }}</p>
         </div>
 
-        <!-- Display total amount -->
+        <!-- Bedrag -->
         <div class="confirmation-total">
+          <p class="txt-body_md">Total Amount: €{{ totalAmount }}</p>
           <p class="txt-body_md">Total Amount: €{{ totalAmount }}</p>
         </div>
 
-        <!-- Customer details -->
+        <!-- Klantgegevens -->
         <div class="customer-details">
           <p class="txt-body_md">{{ nameLabel }} {{ customerName }}</p>
           <p class="txt-body_md">{{ addressLabel }} {{ customerAddress }}</p>
           <p class="txt-body_md">{{ cityLabel }} {{ customerCity }}</p>
         </div>
 
-        <!-- Additional confirmation message -->
+        <!-- Bevestiging -->
         <p class="txt-body_md">Thank you for your order! Your transaction was completed successfully.</p>
 
       </div>

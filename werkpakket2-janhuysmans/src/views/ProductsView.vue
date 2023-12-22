@@ -1,5 +1,4 @@
 
-
 <script>
 import { useProductsStore } from '@/stores/productsStore.js';
 
@@ -20,7 +19,7 @@ export default {
       return this.productsStore.getAllProducts();
     },
     uniqueCategories() {
-      const categories = ['all'];
+      const categories = ['All'];
       this.allProducts.forEach((product) => {
         if (!categories.includes(product.category)) {
           categories.push(product.category);
